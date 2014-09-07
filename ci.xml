@@ -1,225 +1,299 @@
 <?xml version="1.0" ?>
 <CI_list>
   <CI>
-	<name>'Agenda à court terme &lt; 6 mois'</name>
+	<name>Agenda à court terme &lt; 6 mois</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"AlgoJobs et bons plans"</name>
+	<name>AlgoJobs et bons plans</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Algopublishing"</name>
+	<name>Algopublishing</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Allègement concret immédiat"</name>
+	<name>Allègement concret immédiat</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Animaux non-humains"</name>
+	<name>Animaux non-humains</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Annuaire des forces contribuant à l'allègement de la souffrance - Chantier"</name>
+	<name>Annuaire des forces contribuant à l'allègement de la souffrance - Chantier</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Autonomie personnelle"</name>
+	<name>Autonomie personnelle</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Avortement"</name>
+	<name>Avortement</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Bouddhisme"</name>
+	<name>Bouddhisme</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Camus"</name>
+	<name>Camus</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Codes culturels"</name>
+	<name>Codes culturels</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Collaboration Ukratio"</name>
+	<name>Collaboration Ukratio</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Community Management"</name>
+	<name>Community Management</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Complémentaires santé"</name>
+	<name>Complémentaires santé</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Conscience étendue"</name>
+	<name>Conscience étendue</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Cross-fertilization"</name>
+	<name>Cross-fertilization</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Développer les connaissances de chacun"</name>
+	<name>Développer les connaissances de chacun</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Discriminations contre les célibataires et les solos"</name>
+	<name>Discriminations contre les célibataires et les solos</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Diversité linguistique en démocratie directe mondiale"</name>
+	<name>Diversité linguistique en démocratie directe mondiale</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Domaines d'intervention et types d’action"</name>
+	<name>Domaines d'intervention et types d’action</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Droit de disposer de son corps"</name>
+	<name>Droit de disposer de son corps</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Droits humains"</name>
+	<name>Droits humains</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Économie"</name>
+	<name>Économie</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Encyclopédie des problèmes mondiaux et du potentiel humain"</name>
+	<name>Encyclopédie des problèmes mondiaux et du potentiel humain</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Éthique prioritariste"</name>
+	<name>Éthique prioritariste</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Éthique prioritariste de l'alliance"</name>
+	<name>Éthique prioritariste de l'alliance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Évaluation éthique des acteurs"</name>
+	<name>Évaluation éthique des acteurs</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Évaluations éthiques d'un point de vue prioritariste"</name>
+	<name>Évaluations éthiques d'un point de vue prioritariste</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Féminisme"</name>
+	<name>Féminisme</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Fin de vie sans souffrance évitable"</name>
+	<name>Fin de vie sans souffrance évitable</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Financement de l’allègement de la souffrance"</name>
+	<name>Financement de l’allègement de la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Formation à la conscience étendue"</name>
+	<name>Formation à la conscience étendue</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Freins à une culture d’allègement de la souffrance"</name>
+	<name>Freins à une culture d’allègement de la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Identité de l'alliance"</name>
+	<name>Identité de l'alliance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Institutionnalisation d'une nouvelle discipline sur la souffrance"</name>
+	<name>Institutionnalisation d'une nouvelle discipline sur la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Kiddisme"</name>
+	<name>Kiddisme</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Laïcité"</name>
+	<name>Laïcité</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Le socle : une alliance"</name>
+	<name>Le socle : une alliance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Manuel d'algonomie"</name>
+	<name>Manuel d'algonomie</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Méditation"</name>
+	<name>Méditation</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Moyen terme : 6 mois &lt; 3 ans"</name>
+	<name>Moyen terme : 6 mois &lt; 3 ans</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Musique"</name>
+	<name>Musique</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Mutilation génitale féminine (excision...)"</name>
+	<name>Mutilation génitale féminine (excision...)</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Mutilation génitale masculine (circoncision...)"</name>
+	<name>Mutilation génitale masculine (circoncision...)</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Mutilation génitale transgenre"</name>
+	<name>Mutilation génitale transgenre</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Newsletter"</name>
+	<name>Newsletter</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Organiser l'allègement de la souffrance"</name>
+	<name>Organiser l'allègement de la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Orientation Action Concrète"</name>
+	<name>Orientation Action Concrète</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Orientation Connaissance"</name>
+	<name>Orientation Connaissance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Orientation Culture"</name>
+	<name>Orientation Culture</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Outils de mesure et cartographie de la souffrance"</name>
+	<name>Outils de mesure et cartographie de la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Parcours d'accueil"</name>
+	<name>Parcours d'accueil</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Partenaire du monde économique"</name>
+	<name>Partenaire du monde économique</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Plan d'invitation"</name>
+	<name>Plan d'invitation</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Plateforme Collaborative de l’Alliance"</name>
+	<name>Plateforme Collaborative de l’Alliance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Présentation officielle de l'Alliance"</name>
+	<name>Présentation officielle de l'Alliance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Processus de décision"</name>
+	<name>Processus de décision</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Prospective > 3 ans"</name>
+	<name>Prospective > 3 ans</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Règles de fonctionnement"</name>
+	<name>Règles de fonctionnement</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Réseaux de proximité"</name>
+	<name>Réseaux de proximité</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Ressources de l'alliance"</name>
+	<name>Ressources de l'alliance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Revenu Universel"</name>
+	<name>Revenu Universel</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Rire de la souffrance"</name>
+	<name>Rire de la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Sensibiliser à la souffrance animale"</name>
+	<name>Sensibiliser à la souffrance animale</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Site internet public de l'alliance : forme et contenu"</name>
+	<name>Site internet public de l'alliance : forme et contenu</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Sociologie de la souffrance"</name>
+	<name>Sociologie de la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Souffrance vécue"</name>
+	<name>Souffrance vécue</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Soutenir les organisations contribuant à l'allègement de la souffrance"</name>
+	<name>Soutenir les organisations contribuant à l'allègement de la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Soutien administratif de l'Alliance"</name>
+	<name>Soutien administratif de l'Alliance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Système d'information - Conseil Communication"</name>
+	<name>Système d'information - Conseil Communication</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Système interactif de questions-réponses sur le domaine de la souffrance"</name>
+	<name>Système interactif de questions-réponses sur le domaine de la souffrance</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Veille médiatique"</name>
+	<name>Veille médiatique</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Vers des langues vivantes non-sexistes"</name>
+	<name>Vers des langues vivantes non-sexistes</name>
+	<url></url>
   </CI>
   <CI>
-	<name>"Webmaster Team"</name>
+	<name>Webmaster Team</name>
+	<url></url>
   </CI>
 </CI_list>

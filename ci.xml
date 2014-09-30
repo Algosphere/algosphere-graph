@@ -2,30 +2,18 @@
 <CI_list>
   <CI>
 	<name>Agenda à court terme &lt; 6 mois</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Xa0mZNYU4kKdiZEBlXkNKMF4pqa6lVPjvx5FXVglMFg</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>AlgoJobs et bons plans</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/182cuL-eeJATGvQpA3ikMNBfl3wiMHd9bZy2q64L6ofI</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Algopublishing</name>
-	<translations>
-	  <orign_lang>en</orign_lang>
-	  <fr>Algopublishing</fr>
-	</translations>
 	<url>https://docs.google.com/document/d/1Wfz1gwjJ_C9LTenjBq63kYDpuKq8NygaZT66kywroeU</url>
 	<children>
 	  <child>AlgoNews</child>
@@ -34,10 +22,6 @@
   </CI>
   <CI>
 	<name>Allègement concret immédiat</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1s8TznCtqqP71DBPD7qbeo9J-T6yKkuUyoGFtoSAoXoM</url>
 	<children>
 	  <child>Animaux non-humains</child>
@@ -52,10 +36,6 @@
   </CI>
   <CI>
 	<name>Animaux non-humains</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Q_aKc-vsjkn15ohk9lpQwFvLZyCcKU8beC2K0NWehBw</url>
 	<children>
 	  <child>Sensibiliser à la souffrance animale</child>
@@ -63,10 +43,6 @@
   </CI>
   <CI>
 	<name>Annuaire des forces contribuant à l'allègement de la souffrance - Chantier</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/12U8PGEhEHCgxETIWNukHEPZHq_eLOWxQ-zS2oLE_1rw</url>
 	<children>
 	  <child>Collaboration Ukratio</child>
@@ -74,10 +50,6 @@
   </CI>
   <CI>
 	<name>Autonomie personnelle</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/17e2xf-z6SYP99qB91vz-R-_FosHyjRBs-qSR0_wQB2c</url>
 	<children>
 	  <child>Avortement</child>
@@ -92,20 +64,12 @@
   </CI>
   <CI>
 	<name>Avortement</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/10L5cKrSQLWUGtvpRTJ22mEZtrAs0MNaagmLMwhupEyM</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Bouddhisme</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/13wyYlq6m64t5XXCzFPYzqnZmZos6kqMVCiNmVQw97Ao</url>
 	<children>
 	  <child>Méditation</child>
@@ -113,20 +77,12 @@
   </CI>
   <CI>
 	<name>Camus</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>http://drive.google.com/open?id=1MCpYP4eQXdBnL3PQPPDvE21SrFnMziSvUWFDeWvXL60</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Codes culturels</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1pE-TiqfGXAML6kwYILE4P62LH4hcZ8iTP61FJnicfdQ</url>
 	<children>
 	  <child>Animaux non-humains</child>
@@ -141,20 +97,12 @@
   </CI>
   <CI>
 	<name>Collaboration Ukratio</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1PefpH_9JliAIL2sdU_aZdmxCyzyrS68sWU-_rYQo7dg</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Community Management</name>
-	<translations>
-	  <orign_lang>en</orign_lang>
-	  <fr>Gestion de Communauté</fr>
-	</translations>
 	<url>https://docs.google.com/document/d/1CveT05LaxNrri1dTuHKqVKJnkHcsuIRCpCa6kSlTJ_Q</url>
 	<children>
 	  <child>Diversité linguistique en démocratie directe mondiale</child>
@@ -162,20 +110,12 @@
   </CI>
   <CI>
 	<name>Complémentaires santé</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1ZTd71HGFpXSe_DVLci9UFSzBZZEXQzqkjblsUiXNcMw</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Conscience étendue</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1fY9d0IzV1r54Xq9Q523mQxwzFiGCBxtKeKSg5oVvumc</url>
 	<children>
 	  <child>Formation à la conscience étendue</child>
@@ -183,20 +123,12 @@
   </CI>
   <CI>
 	<name>Cross-fertilization</name>
-	<translations>
-	  <orign_lang>en</orign_lang>
-	  <fr>fertilisation croisée</fr>
-	</translations>
 	<url>https://docs.google.com/document/d/1DMWcpUq3APzNsJdzwLBrzljBlqAqtNhXUGP5DvGpPDg</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Développer les connaissances de chacun</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1borea0KwiEJJMCRfZB9O5wUr6fNYFtV7pOlFp9s_nLI</url>
 	<children>
 	  <child>Formation à la conscience étendue</child>
@@ -206,50 +138,30 @@
   </CI>
   <CI>
 	<name>Discriminations contre les célibataires et les solos</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1V6GlmXUklZ00XVQWKtnQt67lq6eiZ1BJHu2uoJ_LJSM</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Diversité linguistique en démocratie directe mondiale</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1N632Xw0No3BY-jIaTFwtUEjLVonBIhfWA5PLbsAEc40</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Domaines d'intervention et types d'action</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1iRimToA7G2-_e3u1X9P_proami6X9TuKO5qgw00K4wI</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Droit de disposer de son corps</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Q9wvPjSPHLD8CK5DoijFY6JGWRdyzBQbtVvEKYK1lQE</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Droits humains</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1KaapmjorJuiVnGmpXWei72GfWVFDbsK7gU1L8I7KZp4</url>
 	<children>
 	  <child>Droit de disposer de son corps</child>
@@ -257,10 +169,6 @@
   </CI>
   <CI>
 	<name>Économie</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/19CQWvKrf61P85FsTn-aziNj4yBdIcQnhclJtmVd9Gxc</url>
 	<children>
 	  <child>Partenaire du monde économique</child>
@@ -270,20 +178,12 @@
   </CI>
   <CI>
 	<name>Encyclopédie des problèmes mondiaux et du potentiel humain</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1gTpV8tlzwBsIgMLhpz0-Rs7iaknTBhcfj1eTw2Nlwhw</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Éthique prioritariste</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Kcd9MTk4zfHW916eyITf4xH9Btkq5PWEe7odhCgCRkE</url>
 	<children>
 	  <child>Éthique prioritariste de l'alliance</child>
@@ -292,20 +192,12 @@
   </CI>
   <CI>
 	<name>Éthique prioritariste de l'alliance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1D_n76apQ5fWZn1F6k5qshpvQB1a3eVZS8T2M2CTd40Q</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Évaluation éthique des acteurs</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1XH2muU7VG5TKK6qQtc9TXEqvYAEt7laTkElLF2eq8MA</url>
 	<children>
 	  <child>Évaluations éthiques d'un point de vue prioritariste</child>
@@ -313,20 +205,12 @@
   </CI>
   <CI>
 	<name>Évaluations éthiques d'un point de vue prioritariste</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1m2ctLy6pAavxNPN5TMnj0EoRAz8jUz9qQfTSJ5555Qs</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Féminisme</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1WchbEkEoAS_cd4s3Hh0UbO8D2xFNCwj3UQ7dngr5MHg</url>
 	<children>
 	  <child>Avortement</child>
@@ -339,10 +223,6 @@
   </CI>
   <CI>
 	<name>Fin de vie sans souffrance évitable</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1TwkJQDPB1D4dGAaTIhviS-tSdCPiZgs7ePb1O0OJvRQ</url>
 	<children>
 	  <child>Avortement</child>
@@ -350,10 +230,6 @@
   </CI>
   <CI>
 	<name>Financement de l'allègement de la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1ZA2RxyIB2u4uGvBHNwEY5I98NhtcMvZVLtd2mIJDJNo</url>
 	<children>
 	  <child>AlgoJobs et bons plans</child>
@@ -363,30 +239,18 @@
   </CI>
   <CI>
 	<name>Formation à la conscience étendue</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/18b6MXxER2tVFZKYY7AjH4CxSWJ46_grZPNYqdPY3n7s</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Freins à une culture d'allègement de la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1vjR-ZHqkU_PbO4MYCRuXKMQTXRZvB_UCa33qZ-P1-U4</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>Identité de l'alliance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/14wYY95jSf7pxOqtuz9Pbb8NXcG_Q52fUgC2iSSxwz2g</url>
 	<children>
 	  <child></child>
@@ -394,10 +258,6 @@
   </CI>
   <CI>
 	<name>Institutionnalisation d'une nouvelle discipline sur la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1b4gvRyBNOhBRPnyLklBeY_qhc42YaFMx6FnDgs-JMnE</url>
 	<children>
 	  <child></child>
@@ -405,10 +265,6 @@
   </CI>
   <CI>
 	<name>Kiddisme</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/16F7eDZXbfAeiHryqqL6bt8InEw6mLo_nSu6Y6MFjGZQ</url>
 	<children>
 	  <child></child>
@@ -416,10 +272,6 @@
   </CI>
   <CI>
 	<name>Laïcité</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1fwVvjFJsfKLWFiBR6t96WcZqSQxqMIcvpZBxTgZBC40</url>
 	<children>
 	  <child></child>
@@ -427,10 +279,6 @@
   </CI>
   <CI>
 	<name>Le socle : une alliance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1MbLoga-SawT2BQs3OCbtw7dKdGANp7yMUoOi_FRX7t8</url>
 	<children>
 	  <child></child>
@@ -438,10 +286,6 @@
   </CI>
   <CI>
 	<name>Manuel d'algonomie</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Rg5BpVJ-iK6r9Fem8O43auCGf72yyvpCWRtYMfQQhN0</url>
 	<children>
 	  <child>Encyclopédie des problèmes mondiaux et du potentiel humain</child>
@@ -449,10 +293,6 @@
   </CI>
   <CI>
 	<name>Méditation</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/15Gx_peGp0lMSvM8PDb5SCfTJ-Fw_ciIp_uEOubcxhwM</url>
 	<children>
 	  <child></child>
@@ -460,10 +300,6 @@
   </CI>
   <CI>
 	<name>Moyen terme : 6 mois &lt; 3 ans</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Dg-E9Dl66-BUsFkqFwi1jF1boEZsh-FRIDNSNVxVZF0</url>
 	<children>
 	  <child></child>
@@ -471,10 +307,6 @@
   </CI>
   <CI>
 	<name>Musique</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1SBnWhStBR5KKsfYjfmFMH0KOJVvi2sQwOnRWDybzLsA</url>
 	<children>
 	  <child></child>
@@ -482,10 +314,6 @@
   </CI>
   <CI>
 	<name>Mutilation génitale féminine (excision...)</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1rcXNNBHUP2zDYRIxLuyXvVIUfSzCPtZbsx3HC7ulcpc</url>
 	<children>
 	  <child></child>
@@ -493,10 +321,6 @@
   </CI>
   <CI>
 	<name>Mutilation génitale masculine (circoncision...)</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1g1BmMTuAXFzIGf3uY0jG_WeAcJBCFuSRF-0ILmNAcVU</url>
 	<children>
 	  <child></child>
@@ -504,10 +328,6 @@
   </CI>
   <CI>
 	<name>Mutilation génitale transgenre</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Tsx-aObeTrjQ49UipoO3l-EU6ppzLYTAz9VnWyi4qPY</url>
 	<children>
 	  <child></child>
@@ -515,9 +335,6 @@
   </CI>
   <CI>
 	<name>Newsletter</name>
-	<translations>
-	  <orign_lang>en</orign_lang>
-	</translations>
 	<url>https://docs.google.com/document/d/11kUtiz18jXf65fJNxLWvh_SPQK5nkU8DNM5lhSxoMlU</url>
 	<children>
 	  <child></child>
@@ -525,10 +342,6 @@
   </CI>
   <CI>
 	<name>Organiser l'allègement de la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1uEcOHrOWxQ58r6bhMRYsEoAeVlDI_yxaz_wV3N12Bgs</url>
 	<children>
 	  <child></child>
@@ -536,10 +349,6 @@
   </CI>
   <CI>
 	<name>Orientation Action Concrète</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1NfqJMVklbFZ8SDJPw9NgrqYe95YZe8sw1AGkXSKmGUs</url>
 	<children>
 	  <child>Allègement concret immédiat</child>
@@ -547,10 +356,6 @@
   </CI>
   <CI>
 	<name>Orientation Connaissance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1hHn_5GON5LpnRvkjVRqwG18e8R716gqtwpaiu-gxcs4</url>
 	<children>
 	  <child></child>
@@ -558,10 +363,6 @@
   </CI>
   <CI>
 	<name>Orientation Culture</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1RmB86G1_j6rGGbVxRzfWu-3ZG-5_x8CyKVWKaKbz9Gk</url>
 	<children>
 	  <child>Algopublishing</child>
@@ -577,10 +378,6 @@
   </CI>
   <CI>
 	<name>Outils de mesure et cartographie de la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1VbWwXABFPz0k-bLaRE4eENIyAMoIO5khfhqEYCMOeto</url>
 	<children>
 	  <child></child>
@@ -588,10 +385,6 @@
   </CI>
   <CI>
 	<name>Parcours d'accueil</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/10qIUQzdwPdIA5ZS5JT_GQcQW5INhCGNhXLTREiJyz90</url>
 	<children>
 	  <child></child>
@@ -599,10 +392,6 @@
   </CI>
   <CI>
 	<name>Partenaire du monde économique</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1J9wOcCERPiegaPzfbDLfcjoH45GAgCPp2HeGE1s-5To</url>
 	<children>
 	  <child></child>
@@ -610,10 +399,6 @@
   </CI>
   <CI>
 	<name>Plan d'invitation</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/19eyUtPkryoN9om4UGqO1xbAb3HnECQE1wVcqE0_CJ_E</url>
 	<children>
 	  <child></child>
@@ -621,10 +406,6 @@
   </CI>
   <CI>
 	<name>Plateforme Collaborative de l'Alliance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1FLCqcu4KstAm4ghWLLyVe7YVlK_pOWTnDGwa8trBy1E</url>
 	<children>
 	  <child></child>
@@ -632,10 +413,6 @@
   </CI>
   <CI>
 	<name>Présentation officielle de l'Alliance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1YgYRRtf1ec5y8okrOAMdmsC6fzTV-pKQRayVCjaj4sI</url>
 	<children>
 	  <child></child>
@@ -643,10 +420,6 @@
   </CI>
   <CI>
 	<name>Processus de décision</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1VxObQTQQv7nIg7QlEei4eh6EiH2pi0kppxwQNJHdhGM</url>
 	<children>
 	  <child></child>
@@ -654,10 +427,6 @@
   </CI>
   <CI>
 	<name>Prospective > 3 ans</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1A6R0M_SL7GibzimhYyIU5VcDpYMnsR_rK7CVWy8uYsk</url>
 	<children>
 	  <child></child>
@@ -665,10 +434,6 @@
   </CI>
   <CI>
 	<name>Règles de fonctionnement</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1q57eua5hLlFdZ4dWQO34RAfnI3gPUjktkKTuzloySwk</url>
 	<children>
 	  <child></child>
@@ -676,10 +441,6 @@
   </CI>
   <CI>
 	<name>Réseaux de proximité</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Okn8aCviG5t96j5KY6OdFGNXPoqBKZWKLrK4n1dn2hw</url>
 	<children>
 	  <child></child>
@@ -687,10 +448,6 @@
   </CI>
   <CI>
 	<name>Ressources de l'alliance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1hJDtfPEcrI7vCvcMpYCY8w4P6zPLhTXOBcM9Nm6Ef28</url>
 	<children>
 	  <child></child>
@@ -698,10 +455,6 @@
   </CI>
   <CI>
 	<name>Revenu Universel</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/18Sv68oL0LquB1eUIKAinCYJ_FqPeOs8FwMrJtOFUi_Y</url>
 	<children>
 	  <child></child>
@@ -709,10 +462,6 @@
   </CI>
   <CI>
 	<name>Rire de la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1IRtUda5S_9_ZOZMs47QhkGNkImUPRs7PC-6g-ylZeBA</url>
 	<children>
 	  <child></child>
@@ -720,10 +469,6 @@
   </CI>
   <CI>
 	<name>Sensibiliser à la souffrance animale</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1NGluSTFc5Xlaw12a3qKP5XA4kAmsOahBWLZvL4v3vXE</url>
 	<children>
 	  <child></child>
@@ -731,10 +476,6 @@
   </CI>
   <CI>
 	<name>Site internet public de l'alliance : forme et contenu</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1nXhrGaih0b8pFP8Ucf730qY53uq6WcF2PzS4Bp4ynPM</url>
 	<children>
 	  <child></child>
@@ -742,10 +483,6 @@
   </CI>
   <CI>
 	<name>Sociologie de la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1BUCoNsVXuJ2XeYH13rjNiYguxKvqZSYq4QWK5Ybvdhg</url>
 	<children>
 	  <child></child>
@@ -753,10 +490,6 @@
   </CI>
   <CI>
 	<name>Souffrance vécue</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1vDOaBw7GUwgm_9VL9wOGoOu9PcZ8yuuLpOYtJ_Clrds</url>
 	<children>
 	  <child></child>
@@ -764,10 +497,6 @@
   </CI>
   <CI>
 	<name>Soutenir les organisations contribuant à l'allègement de la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/170eA7tFdT8b1QqLd7W1YgVVkkJTtqgcy8_PNh9kmNDU</url>
 	<children>
 	  <child></child>
@@ -775,10 +504,6 @@
   </CI>
   <CI>
 	<name>Soutien administratif de l'Alliance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/161nLmbWn8pS3TFISPY5c_fSr6Bdf_HabeUByh782pJo</url>
 	<children>
 	  <child></child>
@@ -786,10 +511,6 @@
   </CI>
   <CI>
 	<name>Système d'information - Conseil Communication</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1Zm-MEz1kDwAdGjfblLv5ARnps3QJ2dlMij_4B-KbH5c</url>
 	<children>
 	  <child></child>
@@ -797,10 +518,6 @@
   </CI>
   <CI>
 	<name>Système interactif de questions-réponses sur le domaine de la souffrance</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1yBPL_yZkY7l55FwudAvCqnnBQGlJXchfkOIfx2V98aU</url>
 	<children>
 	  <child></child>
@@ -808,10 +525,6 @@
   </CI>
   <CI>
 	<name>Veille médiatique</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/16-epKlom4_DNVQA--GWsHRTs3vbgwJsZW5QVe3bW8cg</url>
 	<children>
 	  <child></child>
@@ -819,10 +532,6 @@
   </CI>
   <CI>
 	<name>Vers des langues vivantes non-sexistes</name>
-	<translations>
-	  <orign_lang>fr</orign_lang>
-	  <en></en>
-	</translations>
 	<url>https://docs.google.com/document/d/1uEBi-nNphU9Eh3JgI5Jpg-b19Fq5sKFANniz9CX7ARw</url>
 	<children>
 	  <child></child>
@@ -830,9 +539,6 @@
   </CI>
   <CI>
 	<name>Webmaster Team</name>
-	<translations>
-	  <orign_lang>en</orign_lang>
-	</translations>
 	<url>https://docs.google.com/document/d/1ga_n1CG-no3lGgMFyzWsvisUcyWrDGXLANBvhcGfrz8</url>
 	<children>
 	  <child></child>
@@ -840,9 +546,6 @@
   </CI>
   <CI>
 	<name>AlgoNews</name>
-	<translations>
-	  <orign_lang>en</orign_lang>
-	</translations>
 	<url></url>
 	<children>
 	</children>

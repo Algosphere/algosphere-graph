@@ -3,6 +3,7 @@
 import xml
 from xml.dom import minidom
 from CI import CI
+from mylib.string_op import *
 
 class CI_list:
     def __init__(self, list_of_ci):
@@ -22,13 +23,21 @@ class CI_list:
             tmp += str(ci)
         return tmp
 
+    def find(self, ci_name):
+        assert(type(ci_name) == str)
+        for ci in self:
+            if(ci.name == ci_name):
+                return ci
+        return None
+
     def load_xml(self, xml_file):
         doc = minidom.parse(xml_file)
         for ci in doc.documentElement.childNodes:
             if(ci.nodeType == minidom.Node.ELEMENT_NODE):
                 name = self.get_element(ci, "name")
                 url = self.get_element(ci, "url")
-                self.list_of_ci.append(CI(name, url))
+                # children = self.get_element(ci, "children")
+                self.append(CI(name, url))
 
     @classmethod
     def get_element(cls, ci_node, element):
@@ -44,3 +53,11 @@ class CI_list:
             return element_value
         else:
             raise ValueError("element should be in {name, url} " + element + " given.")
+
+    def to_graphviz(self):
+        string = "digraph CI {\n"
+        for ci in self:
+            string += '    "' + ci.name + '";\n'
+            string += "}"
+
+        return replace_special_char(string)

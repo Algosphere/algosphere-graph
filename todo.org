@@ -1,0 +1,11 @@
+* TODO implement a unit tests system
+** TODO find and learn to use a good unit tests system for python
+** TODO tests all the already developped functionalities
+* TODO implement the download of child CI
+* TODO implement the upload in graphviz format for child CI
+* TODO write a explanation about how the CI are organized in the readme file
+* TODO fix the organization mistake in ci.xml
+* TODO add acceptation date of CI in ci.xml
+* TODO implement the upload in a list format (sorted by name or by date)
+* TODO implement the translation system
+* TODO write a makefile to produce all output easely

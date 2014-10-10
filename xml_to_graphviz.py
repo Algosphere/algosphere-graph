@@ -1,5 +1,8 @@
 #!/bin/python
 
+# command line to transform ci.dot in ci.svg :
+# dot -Tsvg ci.dot > ci.svg
+
 import sys
 from CI_list import CI_list
 

@@ -2,7 +2,7 @@
 
 class CI:
     """center of interest"""
-    def __init__(self, name, url="", children=[], translations=[]):
+    def __init__(self, name, url="", children=[], translations={}):
         self.name = name
         self.url = url
         # ci the are more specific than this ci
@@ -15,26 +15,36 @@ class CI:
         tmp += "url : " + str(self.url) + "\n"
         return tmp
 
-    def add_child(child):
+    def add_child(self, child):
         assert(isinstance(child, CI))
-        self.children.add(child)
+        self.children.append(child)
 
-    def get_children():
+    def get_children(self):
         return self.children
 
-    def add_translation(lang, translation):
-        assert(type(lang) == "string")
-        assert(type(lang) == "string")
+    def add_translation(self, lang, translation):
+        assert(isinstance(lang, str))
+        assert(isinstance(translation, str))
         self.translations[lang] = translation
 
-    def get_name():
+    def get_translations(self):
+        return self.translations
+
+    def translate(self, lang):
+        assert(isinstance(lang, str))
+        if(lang in self.translations):
+            return self.translations[lang]
+        else:
+            return None
+
+    def get_name(self):
         return self.name
 
-    def set_name(name):
+    def set_name(self, name):
         self.name = name
 
-    def get_url():
+    def get_url(self):
         return self.url
 
-    def set_url(url):
+    def set_url(self, url):
         self.url = url

@@ -47,3 +47,8 @@ class CI_listTestCase(unittest.TestCase):
         self.assertEqual(ci_4.get_children(), [ci_1, ci_3])
         self.assertEqual(ci_5.get_children(), [ci_1, ci_2])
 
+    def test_load_xml_with_bad_xml(self):
+        self.assertRaises(ValueError, self.ci_list.load_xml, "bad_ci.xml")
+
+    def test_load_xml_with_bad_xml2(self):
+        self.assertRaises(ValueError, self.ci_list.load_xml, "bad_ci2.xml")

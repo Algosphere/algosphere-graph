@@ -5,7 +5,8 @@
    CLOSED: [2014-10-10 ven. 16:14]
 * DONE implement the download of child CI
   CLOSED: [2014-10-10 ven. 16:15]
-* TODO implement the upload in graphviz format for child CI
+* DONE implement the upload in graphviz format for child CI
+  CLOSED: [2014-10-10 ven. 16:45]
 * TODO write a explanation about how the CI are organized in the readme file
 * TODO fix the organization mistake in ci.xml
 * TODO add acceptation date of CI in ci.xml

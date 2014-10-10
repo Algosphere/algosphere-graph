@@ -8,7 +8,7 @@ import mylib.checking as checking
 
 class CI_list:
     def __init__(self, list_of_ci = None):
-        assert(checking.is_all_instance(list_of_ci, CI))
+        assert(checking.is_all_instance(list_of_ci, CI) or not(list_of_ci))
 
         if(list_of_ci == None):
             self.list_of_ci = []
@@ -59,9 +59,15 @@ class CI_list:
             ci = self.find(ci_name)
             children_node = ci_node.getElementsByTagName("children")[0]
             for child in children_node.getElementsByTagName("child"):
-                child_name = child.firstChild.nodeValue
+                if(child.firstChild == None):
+                    raise ValueError("void child balise in '" + ci_name + "'")
+                else:
+                    child_name = child.firstChild.nodeValue
                 child_ci = self.find(child_name)
-                ci.add_child(child_ci)
+                if(child_ci != None):
+                    ci.add_child(child_ci)
+                else:
+                    raise ValueError("try to add the child : '"+child_name+"' to '"+ci_name+"' but the child was not found")
 
     @classmethod
     def get_element(cls, ci_node, element):
@@ -82,7 +88,9 @@ class CI_list:
     def to_graphviz(self):
         string = "digraph CI {\n"
         for ci in self:
-            string += '    "' + ci.name + '";\n'
-            string += "}"
+            string += '    "' + ci.get_name() + '";\n'
+            for child in ci.get_children():
+                string +='    "' + ci.get_name() + '"->"' + child.get_name() + '";\n'
+        string += "}"
 
         return replace_special_char(string)

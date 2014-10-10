@@ -52,7 +52,7 @@ First you need to create a xml file, where you will add all the CI. (in fact you
 See "how to add CI" section for more information
 Next you should use a few command-line:
 
->> xml_to_graphviz ci.xml ci.dot
+>> xml_to_graphviz.py ci.xml ci.dot
 Will create a ci.dot file (graphviz file), with the ci.xml file.
 
 >> dot -Tsvg ci.dot > ci.svg

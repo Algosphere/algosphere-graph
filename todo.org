@@ -1,8 +1,10 @@
 * TODO implement a unit tests system
 ** DONE find and learn to use a good unit tests system for python
    CLOSED: [2014-10-10 ven. 12:28]
-** TODO tests all the already developped functionalities
-* TODO implement the download of child CI
+** DONE tests all the already developped functionalities
+   CLOSED: [2014-10-10 ven. 16:14]
+* DONE implement the download of child CI
+  CLOSED: [2014-10-10 ven. 16:15]
 * TODO implement the upload in graphviz format for child CI
 * TODO write a explanation about how the CI are organized in the readme file
 * TODO fix the organization mistake in ci.xml

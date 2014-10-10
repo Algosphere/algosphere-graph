@@ -4,14 +4,26 @@ import xml
 from xml.dom import minidom
 from CI import CI
 from mylib.string_op import *
+import mylib.checking as checking
 
 class CI_list:
-    def __init__(self, list_of_ci):
-        self.list_of_ci = list_of_ci
+    def __init__(self, list_of_ci = None):
+        assert(checking.is_all_instance(list_of_ci, CI))
+
+        if(list_of_ci == None):
+            self.list_of_ci = []
+        else:
+            self.list_of_ci = list_of_ci
 
     def __iter__(self):
         for ci in self.list_of_ci:
             yield ci
+
+    def __len__(self):
+        return len(self.list_of_ci)
+
+    def get_list_of_ci(self):
+        return self.list_of_ci
 
     def append(self, ci):
         assert(isinstance(ci, CI))
@@ -31,21 +43,34 @@ class CI_list:
         return None
 
     def load_xml(self, xml_file):
+        self.list_of_ci = []
         doc = minidom.parse(xml_file)
-        for ci in doc.documentElement.childNodes:
-            if(ci.nodeType == minidom.Node.ELEMENT_NODE):
-                name = self.get_element(ci, "name")
-                url = self.get_element(ci, "url")
-                # children = self.get_element(ci, "children")
-                self.append(CI(name, url))
+        for ci_node in doc.documentElement.getElementsByTagName("CI"):
+                name = self.get_element(ci_node, "name")
+                url = self.get_element(ci_node, "url")
+                ci = CI(name, url)
+                self.append(ci)
+
+        self.load_children(doc)
+
+    def load_children(self, doc):
+        for ci_node in doc.documentElement.getElementsByTagName("CI"):
+            ci_name = ci_node.getElementsByTagName("name")[0].firstChild.nodeValue
+            ci = self.find(ci_name)
+            children_node = ci_node.getElementsByTagName("children")[0]
+            for child in children_node.getElementsByTagName("child"):
+                child_name = child.firstChild.nodeValue
+                child_ci = self.find(child_name)
+                ci.add_child(child_ci)
 
     @classmethod
     def get_element(cls, ci_node, element):
-        element_value = ci_node.getElementsByTagName(element)[0].firstChild
-        if(element_value == None):
+        node = ci_node.getElementsByTagName(element)[0]
+
+        if(node.firstChild == None):
             return ""
         else:
-            element_value = element_value.nodeValue
+            return node.firstChild.nodeValue
 
         if(element == "name"):
             return element_value

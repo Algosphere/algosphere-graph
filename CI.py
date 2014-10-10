@@ -2,12 +2,19 @@
 
 class CI:
     """center of interest"""
-    def __init__(self, name, url="", children=[], translations={}):
+    def __init__(self, name, url="", children=None, translations=None):
         self.name = name
         self.url = url
         # ci the are more specific than this ci
-        self.children = children
-        self.translations = translations
+        if(children == None):
+            self.children = []
+        else:
+            self.children = children
+
+        if(translations == None):
+            self.translations = {}
+        else:
+            self.translations = translations
 
     def __str__(self):
         tmp = "-"*10 + "CI" + "-"*10 + "\n"

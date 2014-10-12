@@ -21,6 +21,10 @@ class CITestCase(unittest.TestCase):
         self.ci.set_url("url")
         self.assertEqual(self.ci.get_url(), "url")
 
+        self.assertEqual(self.ci.get_date(), None)
+        self.ci.set_date("date")
+        self.assertEqual(self.ci.get_date(), "date")
+
         self.assertEqual(self.ci.get_children(), [])
         self.child_ci = CI("child_ci")
         self.ci.add_child(self.child_ci)

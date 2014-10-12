@@ -2,7 +2,7 @@
 
 class CI:
     """center of interest"""
-    def __init__(self, name, url="", date = None, children=None, translations=None):
+    def __init__(self, name, url="", date=None, children=None, translations=None):
         self.name = name
         self.url = url
         self.date = date # connection date of the CI
@@ -49,7 +49,7 @@ class CI:
     def get_date(self):
         return self.date
 
-    def set_date(self):
+    def set_date(self, date):
         self.date = date
 
     def get_name(self):

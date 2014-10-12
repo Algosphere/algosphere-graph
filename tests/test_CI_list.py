@@ -52,3 +52,15 @@ class CI_listTestCase(unittest.TestCase):
 
     def test_load_xml_with_bad_xml2(self):
         self.assertRaises(ValueError, self.ci_list.load_xml, "bad_ci2.xml")
+
+    def test_sorted_by_name(self):
+        self.ci_list = CI_list([self.ci2, self.ci1, self.ci3])
+        self.assertEqual(self.ci_list.sorted_by_name(), [self.ci1, self.ci2, self.ci3])
+
+    def test_sorted_by_date(self):
+        self.ci1.set_date("2014-01-02")
+        self.ci2.set_date("2014-01-02")
+        self.ci3.set_date("2014-01-01")
+        self.ci_list = CI_list([self.ci2, self.ci1, self.ci3])
+
+        self.assertEqual(self.ci_list.sorted_by_date(), [self.ci3, self.ci1, self.ci2])

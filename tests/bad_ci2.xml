@@ -2,12 +2,14 @@
 <CI_list>
   <CI>
 	<name>ci_1</name>
+	<date>2014-01-01</date>
 	<url>url1</url>
 	<children>
 	</children>
   </CI>
   <CI>
 	<name>ci_2</name>
+	<date>2014-01-01</date>
 	<url>url2</url>
 	<children>
 	  <child></child>
@@ -15,6 +17,7 @@
   </CI>
   <CI>
 	<name>ci_3</name>
+	<date>2014-01-01</date>
 	<url>url3</url>
 	<children>
 	  <child>ci_2</child>
@@ -22,6 +25,7 @@
   </CI>
   <CI>
 	<name>ci_4</name>
+	<date>2014-01-01</date>
 	<url>url4</url>
 	<children>
 	  <child>ci_1</child>
@@ -30,6 +34,7 @@
   </CI>
   <CI>
 	<name>ci_5</name>
+	<date>2014-01-01</date>
 	<url>url5</url>
 	<children>
 	  <child>ci_1</child>

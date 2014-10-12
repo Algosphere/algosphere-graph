@@ -9,8 +9,14 @@
   CLOSED: [2014-10-10 ven. 16:45]
 * DONE write a explanation about how the CI are organized in the readme file
   CLOSED: [2014-10-10 ven. 19:18]
-* TODO write a makefile to produce all output easely
-* TODO fix the organization mistake in ci.xml
-* TODO add acceptation date of CI in ci.xml
-* TODO implement the upload in a list format (sorted by name or by date)
+* DONE write a makefile to produce all output easely
+  CLOSED: [2014-10-12 dim. 09:17]
+* DONE add clickable link
+  CLOSED: [2014-10-12 dim. 10:08]
+* DONE fix the organization mistake in ci.xml
+  CLOSED: [2014-10-12 dim. 12:08]
+* DONE add acceptation date of CI in ci.xml
+  CLOSED: [2014-10-12 dim. 14:02]
+* DONE implement the upload in a list format (sorted by name or by date)
+  CLOSED: [2014-10-12 dim. 15:48]
 * TODO implement the translation system

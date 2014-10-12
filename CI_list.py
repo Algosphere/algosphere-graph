@@ -48,7 +48,8 @@ class CI_list:
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
                 name = self.get_element(ci_node, "name")
                 url = self.get_element(ci_node, "url")
-                ci = CI(name, url)
+                date = self.get_element(ci_node, "date")
+                ci = CI(name, url, date)
                 self.append(ci)
 
         self.load_children(doc)
@@ -74,7 +75,7 @@ class CI_list:
         node = ci_node.getElementsByTagName(element)[0]
 
         if(node.firstChild == None):
-            return ""
+            return None
         else:
             return node.firstChild.nodeValue
 
@@ -82,13 +83,72 @@ class CI_list:
             return element_value
         elif(element == "url"):
             return element_value
+        elif(element == "date"):
+            if(element_value == ""):
+                return None
+            else:
+                return element_value
         else:
             raise ValueError("element should be in {name, url} " + element + " given.")
 
+    def sorted_by_name(self):
+        return sorted(self.list_of_ci, key = lambda ci:ci.get_name())
+
+    def sorted_by_date(self):
+        def compare(ci):
+            if(ci.get_date() != None):
+                return (ci.get_date(), ci.get_name())
+            else:
+                return ("", ci.get_name())
+
+        return sorted(self.list_of_ci, key = compare)
+
+    def to_html_list(self, order="by_name"):
+        string = "<html>\n"
+        string += "  <head>\n"
+        string += '    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
+        string += "  </head>\n"
+        string += "  <body>\n"
+        string += "    <ul>\n"
+
+        if(order == "by_name"):
+            sorted_list_of_ci = self.sorted_by_name()
+        elif(order == "by_date"):
+            sorted_list_of_ci = self.sorted_by_date()
+        else:
+            raise ValueError("order should be 'by_name', or 'by_date'. '"+order+"' given.")
+
+        if((order == "by_date")and(len(sorted_list_of_ci) > 0)):
+            date = sorted_list_of_ci[0].get_date()
+            if(date != None):
+                str_date = date
+            else:
+                str_date = "unknown"
+            string += '      <h2>'+str_date+'</h2>'
+
+        for ci in sorted_list_of_ci:
+            if((order == "by_date")and(ci.get_date() != date)):
+                date = ci.get_date()
+                if(date != None):
+                    str_date = date
+                else:
+                    str_date = "unknown"
+
+                string += '      <h2>'+str_date+'</h2>'
+
+            string += '      <li><a href="' + ci.get_url() + '">' + ci.get_name() + '</a></li>\n'
+
+        string += "    </ul>\n"
+        string += "  </body>\n"
+        string += "</html>\n"
+
+        return string
+
     def to_graphviz(self):
         string = "digraph CI {\n"
+        string += '    node [fontcolor=blue, fontsize=8];\n'
         for ci in self:
-            string += '    "' + ci.get_name() + '";\n'
+            string += '    "' + ci.get_name() + '"[URL="'+ci.url+ '"];\n'
             for child in ci.get_children():
                 string +='    "' + ci.get_name() + '"->"' + child.get_name() + '";\n'
         string += "}"

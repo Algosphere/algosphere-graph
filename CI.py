@@ -2,10 +2,12 @@
 
 class CI:
     """center of interest"""
-    def __init__(self, name, url="", children=None, translations=None):
+    def __init__(self, name, url="", date = None, children=None, translations=None):
         self.name = name
         self.url = url
-        # ci the are more specific than this ci
+        self.date = date # connection date of the CI
+
+        # ci which are more specific than this ci
         if(children == None):
             self.children = []
         else:
@@ -43,6 +45,12 @@ class CI:
             return self.translations[lang]
         else:
             return None
+
+    def get_date(self):
+        return self.date
+
+    def set_date(self):
+        self.date = date
 
     def get_name(self):
         return self.name

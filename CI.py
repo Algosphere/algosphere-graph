@@ -1,5 +1,3 @@
-#!/bin/python
-
 class CI:
     """center of interest"""
     def __init__(self, name, url="", date=None, children=None, translations=None):

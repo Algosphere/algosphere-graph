@@ -1,5 +1,3 @@
-#!/bin/python
-
 import xml
 from xml.dom import minidom
 from CI import CI

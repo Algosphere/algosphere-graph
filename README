@@ -53,9 +53,9 @@ See "how to add CI" section for more information
 Next you should use a few command-line:
 
 >> make
-Will create all usefull file
+Will create all usefull file in output
 >> make mrproper
-Will delete all created file (WARNING : it delete file by name)
+Will delete all file in output (WARNING)
 
 ================================
 	how to add CI

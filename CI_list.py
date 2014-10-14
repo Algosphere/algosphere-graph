@@ -6,7 +6,7 @@ import mylib.checking as checking
 
 class CI_list:
     def __init__(self, list_of_ci = None):
-        assert(checking.is_all_instance(list_of_ci, CI) or not(list_of_ci))
+        assert(not(list_of_ci) or checking.is_all_instance(list_of_ci, CI))
 
         if(list_of_ci == None):
             self.list_of_ci = []

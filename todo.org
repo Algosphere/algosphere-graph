@@ -21,6 +21,9 @@
 * DONE implement the upload in a list format (sorted by name or by date)
   CLOSED: [2014-10-12 dim. 15:48]
 * TODO implement the translation system
+* TODO refactorization(use PEP8)
+* TODO refactorization(use the properties system)
 * TODO write the french and the english translation
 * TODO refactorize CI_list xml loading to allow multiples types of schema and have a central file for the ci names
+** TODO create xml schema
 * TODO implement the upload in freemind

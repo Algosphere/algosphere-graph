@@ -1,16 +1,6 @@
 <?xml version="1.0" ?>
 <CI_list>
   <CI>
-	<name>Algosphere</name>
-	<date>2013-05-01</date>
-	<url>https://algosphere.org</url>
-	<children>
-	  <child>Orientation Culture</child>
-	  <child>Orientation Action Concrète</child>
-	  <child>Orientation Connaissance</child>
-	</children>
-  </CI>
-  <CI>
 	<name>Agenda à court terme &lt; 6 mois</name>
 	<date>2013-11-24</date>
 	<url>https://docs.google.com/document/d/1Xa0mZNYU4kKdiZEBlXkNKMF4pqa6lVPjvx5FXVglMFg</url>
@@ -395,6 +385,9 @@
 	<date>2013-05-01</date>
 	<url>https://docs.google.com/document/d/1uEcOHrOWxQ58r6bhMRYsEoAeVlDI_yxaz_wV3N12Bgs</url>
 	<children>
+	  <child>Orientation Culture</child>
+	  <child>Orientation Action Concrète</child>
+	  <child>Orientation Connaissance</child>
 	  <child>Le socle : une alliance</child>
 	</children>
   </CI>
@@ -405,7 +398,6 @@
 	<children>
 	  <child>Animaux non-humains</child>
 	  <child>Allègement concret immédiat</child>
-	  <child>Organiser l'allègement de la souffrance</child>
 	  <child>Soutenir les organisations contribuant à l'allègement de la souffrance</child>
 	</children>
   </CI>
@@ -414,7 +406,6 @@
 	<date>2013-05-01</date>
 	<url>https://docs.google.com/document/d/1hHn_5GON5LpnRvkjVRqwG18e8R716gqtwpaiu-gxcs4</url>
 	<children>
-	  <child>Organiser l'allègement de la souffrance</child>
 	  <child>Institutionnalisation d'une nouvelle discipline sur la souffrance</child>
 	  <child>Évaluation éthique des acteurs</child>
 	  <child>Animaux non-humains</child>
@@ -587,6 +578,7 @@
 	  <child>Plateforme Collaborative de l'Alliance</child>
 	  <child>Site internet public de l'alliance : forme et contenu</child>
 	  <child>Webmaster Team</child>
+	  <child>Archives Algosphere Alliance</child>
 	</children>
   </CI>
   <CI>
@@ -614,6 +606,70 @@
 	<name>Webmaster Team</name>
 	<date>2013-05-01</date>
 	<url>https://docs.google.com/document/d/1ga_n1CG-no3lGgMFyzWsvisUcyWrDGXLANBvhcGfrz8</url>
+	<children>
+	  <child>Meetings du Conseil Communication 2014</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Meetings du Conseil Communication 2014</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1MKsaa261kSfJTsgwEd6mLgIhCobKyzDq-2lu03FKcdk</url>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Archives Algosphere Alliance</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1O8yNJM5IzMG873rXIqh2SNkTZLlRJUkCX5_3txBepF4</url>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Agora</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/17zLxF1WO3YTx4l8Qy2aw2lHm6Dn3q0B2wfofp8EfPqY</url>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Agora</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/17zLxF1WO3YTx4l8Qy2aw2lHm6Dn3q0B2wfofp8EfPqY</url>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Centre d'intérêt - modèle</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1vofY4Dnsg_2lAkrAv0G-CeNy2K-LGv89ohFJab_rFh8</url>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Questions-suggestions-critiques</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1MU84sexm0AmS-hu3CTSv0SLrOxu2cFD1REse6ub4YsE</url>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>AlgoNews</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1DBa1pEdACvb7VH4y945ULfaAWslGkpCQDZjINOb8l6I</url>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Annuaire des invités inscrits et des alliés</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/spreadsheet/ccc?key=0AsCCSwW5inUkdEh1TUpfNjgxMDJvUmFzRUpGVG9tcFE</url>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Annuaire des alliés, invités  Chantier</name>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1UfTporAxLBt2E_i8ihhHhKVdNn4X2_GX73Jqcr-JgwU</url>
 	<children>
 	</children>
   </CI>

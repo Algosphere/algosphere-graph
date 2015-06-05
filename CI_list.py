@@ -142,13 +142,16 @@ class CI_list:
 
         return string
 
-    def to_graphviz(self):
+    def to_graphviz(self, translate = None):
+        if(translate == None):
+            translate = lambda x:x
+
         string = "digraph CI {\n"
         string += '    node [fontcolor=blue, fontsize=8];\n'
         for ci in self:
-            string += '    "' + ci.get_name() + '"[URL="'+ci.url+ '"];\n'
+            string += '    "' + translate(ci.get_name()) + '"[URL="'+ci.url+ '"];\n'
             for child in ci.get_children():
-                string +='    "' + ci.get_name() + '"->"' + child.get_name() + '";\n'
+                string +='    "' + translate(ci.get_name()) + '"->"' + child.get_name() + '";\n'
         string += "}"
 
         return replace_special_char(string)

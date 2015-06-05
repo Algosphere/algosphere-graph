@@ -1,7 +1,7 @@
 all: ci.svg ci_by_name.html ci_by_date.html clean
 
 fill_dic_files:
-	./fill_yaml_file.py ci.xml ./translations
+	./fill_yaml_file.py -v ci.xml ./translations
 
 ci.svg: ci.dot
 	dot -Tsvg ./output/ci.dot > ./output/ci.svg

@@ -7,6 +7,7 @@ import sys
 import argparse
 from CI_list import CI_list
 from Translations_manager import Translations_manager
+from mylib.Notifier import Notifier
 
 def create_graph_for_language(translations_manager, lang, output_directory, base_name):
     translate = translations_manager.get_translateur(lang).translate

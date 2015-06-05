@@ -17,3 +17,6 @@ clean:
 
 mrproper: clean
 	rm -f ./output/*
+
+test:
+	python -m unittest tests/test_*

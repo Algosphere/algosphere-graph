@@ -1,11 +1,9 @@
 import unittest
 import sys
 
-sys.path.append("..")
-
 from Translateur import Translateur
 
-class CI_listTestCase(unittest.TestCase):
+class CITranslateur(unittest.TestCase):
 
     def setUp(self):
         translations = {'ci 1':'ci one', 'ci 2':'ci two', 'ci 3':'ci three'}

@@ -2,7 +2,7 @@ import unittest
 import sys
 #from proboscis import test # maybe we should use it for adding dependencies between test
 
-sys.path.append("..")
+# sys.path.append("..")
 
 from CI_list import *
 
@@ -28,7 +28,7 @@ class CI_listTestCase(unittest.TestCase):
         self.assertEqual(self.ci_list.find("unknow"), None)
 
     def test_load_xml(self):
-        self.ci_list.load_xml("ci.xml")
+        self.ci_list.load_xml("tests/ci.xml")
         self.assertEqual(len(self.ci_list), 5)
         ci_1 = self.ci_list.find("ci_1")
         ci_2 = self.ci_list.find("ci_2")
@@ -48,10 +48,10 @@ class CI_listTestCase(unittest.TestCase):
         self.assertEqual(ci_5.get_children(), [ci_1, ci_2])
 
     def test_load_xml_with_bad_xml(self):
-        self.assertRaises(ValueError, self.ci_list.load_xml, "bad_ci.xml")
+        self.assertRaises(ValueError, self.ci_list.load_xml, "tests/bad_ci.xml")
 
     def test_load_xml_with_bad_xml2(self):
-        self.assertRaises(ValueError, self.ci_list.load_xml, "bad_ci2.xml")
+        self.assertRaises(ValueError, self.ci_list.load_xml, "tests/bad_ci2.xml")
 
     def test_sorted_by_name(self):
         self.ci_list = CI_list([self.ci2, self.ci1, self.ci3])

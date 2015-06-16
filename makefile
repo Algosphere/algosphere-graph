@@ -3,22 +3,29 @@ all: ci.svg ci_by_name.html ci_by_date.html clean
 fill_dic_files:
 	./fill_yaml_file.py -v ci.xml ./translations
 
-ci.svg: ci.dot
-	dot -Tsvg ./output/ci.dot > ./output/ci.svg
+create_graph: create_dot create_svg
 
-ci.dot: ci.xml
-	./xml_to_graphviz.py ci.xml ./output/ci.dot
+.ONESHELL:
+create_svg: ./output/ci*.dot
+	for file in $?
+	do
+		echo "create $${file%.*}.svg"
+		dot -Tsvg $$file > $${file%.*}.svg
+	done
 
-ci_by_name.html: ci.xml
+create_dot: ci.xml ./translations/*.yml
+	./xml_to_graphviz.py -v ci.xml ./output/
+
+ci_by_name.html: ci.xml ./translations/*.yml
 	./xml_to_html_list.py ci.xml ./output/ci_by_name.html
 
-ci_by_date.html: ci.xml
+ci_by_date.html: ci.xml ./translations/*.yml
 	./xml_to_html_list.py -d ci.xml ./output/ci_by_date.html
 
 clean:
-	rm -f ./output/ci.dot
+	rm -f ./output/ci*.dot
 
-mrproper: clean
+mrproper:
 	rm -f ./output/*
 
 test:

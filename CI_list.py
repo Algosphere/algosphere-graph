@@ -98,19 +98,23 @@ class CI_list:
         else:
             raise ValueError("element should be in {name, url} " + element + " given.")
 
-    def sorted_by_name(self):
-        return sorted(self.list_of_ci, key = lambda ci:ci.get_name())
+    def sorted_by_name(self, translate):
+        return sorted(self.list_of_ci, key = lambda ci:translate(ci.get_name()))
 
-    def sorted_by_date(self):
+    def sorted_by_date(self, translate):
         def compare(ci):
             if(ci.get_date() != None):
-                return (ci.get_date(), ci.get_name())
+                return (ci.get_date(), translate(ci.get_name()))
             else:
-                return ("", ci.get_name())
+                return ("", translate(ci.get_name()))
 
         return sorted(self.list_of_ci, key = compare)
 
-    def to_html_list(self, order="by_name"):
+    def to_html_list(self, order="by_name", translate = None):
+
+        if(translate == None):
+            translate = lambda x:x
+
         string = "<html>\n"
         string += "  <head>\n"
         string += '    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
@@ -119,9 +123,9 @@ class CI_list:
         string += "    <ul>\n"
 
         if(order == "by_name"):
-            sorted_list_of_ci = self.sorted_by_name()
+            sorted_list_of_ci = self.sorted_by_name(translate)
         elif(order == "by_date"):
-            sorted_list_of_ci = self.sorted_by_date()
+            sorted_list_of_ci = self.sorted_by_date(translate)
         else:
             raise ValueError("order should be 'by_name', or 'by_date'. '"+order+"' given.")
 
@@ -143,7 +147,7 @@ class CI_list:
 
                 string += '      <h2>'+str_date+'</h2>'
 
-            string += '      <li><a href="' + ci.get_url() + '">' + ci.get_name() + '</a></li>\n'
+            string += '      <li><a href="' + ci.get_url() + '">' + translate(ci.get_name()) + '</a></li>\n'
 
         string += "    </ul>\n"
         string += "  </body>\n"

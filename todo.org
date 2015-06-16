@@ -27,12 +27,14 @@
 ** DONE add notification system for xml_to_html_list
    CLOSED: [2015-06-16 mar. 06:58]
 * TODO ne présenter que l’interface utilisateur dans le makefile avec la complétion automatique
-* TODO implement the translation system
+* DONE implement the translation system
+  CLOSED: [2015-06-16 mar. 13:22]
 ** DONE faire en sorte que makefile crée les svg demandé
    CLOSED: [2015-06-16 mar. 11:30]
 ** DONE vérifier que les svg sont traduit correctement
    CLOSED: [2015-06-16 mar. 12:04]
-** TODO implémenter le système de traduction pour les listes
+** DONE implémenter le système de traduction pour les listes
+   CLOSED: [2015-06-16 mar. 13:22]
 * TODO refactorization(use PEP8)
 * TODO refactorization(use the properties system)
 * TODO utiliser une méthode conventionnel pour la boucle du makefile

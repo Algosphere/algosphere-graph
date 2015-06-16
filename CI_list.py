@@ -3,15 +3,23 @@ from xml.dom import minidom
 from CI import CI
 from mylib.string_op import *
 import mylib.checking as checking
+from mylib.Notifier import Notifier
 
 class CI_list:
-    def __init__(self, list_of_ci = None):
+    def __init__(self, list_of_ci = None, notifier = None):
         assert(not(list_of_ci) or checking.is_all_instance(list_of_ci, CI))
+        if(notifier != None):
+            assert(isinstance(notifier, Notifier))
 
+        self.notifier = notifier
         if(list_of_ci == None):
             self.list_of_ci = []
         else:
             self.list_of_ci = list_of_ci
+
+    def notify(self, text):
+        if(self.notifier != None):
+            self.notifier.notify(text)
 
     def __iter__(self):
         for ci in self.list_of_ci:
@@ -41,6 +49,7 @@ class CI_list:
         return None
 
     def load_xml(self, xml_file):
+        self.notify('load xml_file "' + xml_file + '"')
         self.list_of_ci = []
         doc = minidom.parse(xml_file)
         for ci_node in doc.documentElement.getElementsByTagName("CI"):

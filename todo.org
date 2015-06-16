@@ -20,9 +20,21 @@
   CLOSED: [2014-10-12 dim. 14:02]
 * DONE implement the upload in a list format (sorted by name or by date)
   CLOSED: [2014-10-12 dim. 15:48]
+* DONE add notification system
+  CLOSED: [2015-06-16 mar. 06:59]
+** DONE add notification system for xml_to_graphviz
+   CLOSED: [2015-06-16 mar. 06:52]
+** DONE add notification system for xml_to_html_list
+   CLOSED: [2015-06-16 mar. 06:58]
+* TODO ne présenter que l’interface utilisateur dans le makefile avec la complétion automatique
 * TODO implement the translation system
+** DONE faire en sorte que makefile crée les svg demandé
+   CLOSED: [2015-06-16 mar. 11:30]
+** TODO vérifier que les svg sont traduit correctement
+** TODO implémenter le système de traduction pour les listes
 * TODO refactorization(use PEP8)
 * TODO refactorization(use the properties system)
+* TODO utiliser une méthode conventionnel pour la boucle du makefile
 * TODO write the french and the english translation
 * TODO refactorize CI_list xml loading to allow multiples types of schema and have a central file for the ci names
 ** TODO create xml schema

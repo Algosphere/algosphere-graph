@@ -30,7 +30,8 @@
 * TODO implement the translation system
 ** DONE faire en sorte que makefile crée les svg demandé
    CLOSED: [2015-06-16 mar. 11:30]
-** TODO vérifier que les svg sont traduit correctement
+** DONE vérifier que les svg sont traduit correctement
+   CLOSED: [2015-06-16 mar. 12:04]
 ** TODO implémenter le système de traduction pour les listes
 * TODO refactorization(use PEP8)
 * TODO refactorization(use the properties system)

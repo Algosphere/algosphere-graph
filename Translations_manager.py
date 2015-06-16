@@ -18,7 +18,6 @@ class Translations_manager:
         self.lang_file_name = lang_file_name
         self.output_directory = output_directory
         self.translateurs = {}
-        self.untranslated_token = "#untranlated#"
         with open(self.lang_file_name, 'r') as lang_file:
             self.notify('find languages in "' + self.lang_file_name + '"')
             self.languages = yaml.safe_load(lang_file)
@@ -89,7 +88,7 @@ class Translations_manager:
         for ci_name in ci_name_list:
             if not(self.translateurs[lang].translate(ci_name)):
                 self.notify('for language ' + lang + ' add a new item for "' + ci_name + '"')
-                self.translateurs[lang].add_translation(ci_name, self.untranslated_token)
+                self.translateurs[lang].add_translation(ci_name, Translateur.untranslated_token())
 
     def get_languages(self):
         return self.languages

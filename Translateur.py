@@ -1,5 +1,9 @@
 
 class Translateur:
+
+    def untranslated_token(cls):
+        return "#untranlated#"
+
     def __init__(self, lang, iso_639_1, translations):
         self.lang = lang
         self.iso_639_1 = iso_639_1
@@ -8,7 +12,10 @@ class Translateur:
     def translate(self, sentence):
         assert(isinstance(sentence, str))
         if(sentence in self.translations):
-            return self.translations[sentence]
+            if(self.translations[sentence] == self.untranslated_token()):
+                return sentence + ' ' + self.untranslated_token()
+            else:
+                return self.translations[sentence]
         else:
             return None
 

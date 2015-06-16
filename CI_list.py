@@ -160,7 +160,7 @@ class CI_list:
         for ci in self:
             string += '    "' + translate(ci.get_name()) + '"[URL="'+ci.url+ '"];\n'
             for child in ci.get_children():
-                string +='    "' + translate(ci.get_name()) + '"->"' + child.get_name() + '";\n'
+                string +='    "' + translate(ci.get_name()) + '"->"' + translate(child.get_name()) + '";\n'
         string += "}"
 
         return replace_special_char(string)

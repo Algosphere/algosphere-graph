@@ -26,7 +26,9 @@
    CLOSED: [2015-06-16 mar. 06:52]
 ** DONE add notification system for xml_to_html_list
    CLOSED: [2015-06-16 mar. 06:58]
-* TODO ne présenter que l’interface utilisateur dans le makefile avec la complétion automatique
+* DONE ne présenter que l’interface utilisateur dans le makefile avec la complétion automatique
+  CLOSED: [2015-06-25 jeu. 18:57]
+  pas trouver de moyen de le faire, just ajouter un "_" devant les noms des règles intermédiaires
 * DONE implement the translation system
   CLOSED: [2015-06-16 mar. 13:22]
 ** DONE faire en sorte que makefile crée les svg demandé

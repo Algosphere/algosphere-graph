@@ -1,19 +1,30 @@
 #!/bin/python
 
-# command line to transform ci.dot in ci.svg :
-# dot -Tsvg ci.dot > ci.svg
+"""
+Get all the centres of interest without date.
+
+Usage: without_date.py ci.xml
+
+command line to transform ci.dot in ci.svg :
+dot -Tsvg ci.dot > ci.svg
+"""
+
 
 import sys
-from CI_list import CI_list
+from centres_of_interest_manager import CentresOfInterestManager
 
-if(len(sys.argv) != 2):
+if len(sys.argv) != 2:
     print("without_date.py ci.xml")
     exit(1)
 
-ci_list = CI_list([])
-ci_list.load_xml(sys.argv[1])
+def execute():
+    """ Execute the script, see module docstring for more details """
+    ci_manager = CentresOfInterestManager([])
+    ci_manager.load_xml(sys.argv[1])
 
-for ci in ci_list:
-    if(ci.get_date() == None):
-        print(ci.get_name())
+    for centre_of_interest in ci_manager:
+        if centre_of_interest.get_date() == None:
+            print(centre_of_interest.get_name())
+
+execute()
 

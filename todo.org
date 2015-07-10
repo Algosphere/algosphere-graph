@@ -40,7 +40,7 @@
 * TODO refactorization(use PEP8)
 * TODO refactorization(use the properties system)
 * TODO use scons instead of makefile
-* TODO utiliser une méthode conventionnel pour la boucle du makefile
+* TODO use pytest instead of phpunit
 * TODO write the french and the english translation
 * TODO refactorize CI_list xml loading to allow multiples types of schema and have a central file for the ci names
 ** TODO create xml schema

@@ -27,8 +27,8 @@ def create_graph_for_language(translations_manager,
                     '" in directory "' + output_directory + '"')
     translate = translations_manager.get_translateur(lang).translate
     file_name = output_directory + base_name + '-' + lang + '.dot'
-    yaml_file = open(file_name, 'w')
-    yaml_file.write(ci_manager.to_graphviz(translate))
+    yaml_file = open(file_name, 'wb')
+    yaml_file.write(ci_manager.to_graphviz(translate).encode('utf-8'))
     yaml_file.close()
 
 def execute():

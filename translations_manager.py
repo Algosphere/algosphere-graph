@@ -25,7 +25,7 @@ class TranslationsManager:
         self.lang_file_name = lang_file_name
         self.translations_directory = translations_directory
         self.translateurs = {}
-        with open(self.lang_file_name, 'r') as lang_file:
+        with open(self.lang_file_name, 'rb') as lang_file:
             self.notify('find languages in "' + self.lang_file_name + '"')
             self.languages = yaml.safe_load(lang_file)
 
@@ -42,7 +42,7 @@ class TranslationsManager:
 
             if not os.path.exists(file_name):
                 self.notify('create "' + file_name + '"')
-                new_file = open(file_name, "w")
+                new_file = open(file_name, "wb")
                 new_file.close()
 
     def load_yaml_files(self):
@@ -50,7 +50,7 @@ class TranslationsManager:
         self.translateurs = {}
         dir_files = glob.glob(self.translations_directory + "/*.yml")
         for yml_file_name in dir_files:
-            with open(yml_file_name, 'r') as yml_file:
+            with open(yml_file_name, 'rb') as yml_file:
                 self.notify('open "' + yml_file_name + '"')
                 lang = splitext(basename(yml_file_name))[0]
                 iso_639_1 = self.languages[lang]
@@ -64,12 +64,12 @@ class TranslationsManager:
         shutil.rmtree(self.translations_directory)
         os.mkdir(self.translations_directory)
         for lang in self.languages:
-            yml_file_name = self.translations_directory + "/" + lang + ".yml"
+            yml_file_name = self.translations_directory + lang + ".yml"
             translations = self.translateurs[lang].translations
-            with open(yml_file_name, 'w') as yml_file:
+            with open(yml_file_name, 'wb') as yml_file:
                 self.notify('save "' + yml_file_name + '"')
                 stream = yaml.dump(translations, default_flow_style=False, allow_unicode=True)
-                yml_file.write(stream)
+                yml_file.write(stream.encode('utf-8'))
 
     def get_translateur(self, lang):
         """ Get the translateur for the language 'lang'. """

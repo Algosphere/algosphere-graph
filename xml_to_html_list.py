@@ -26,8 +26,8 @@ def create_list_for_language(translations_manager,
                     '" in directory "' + output_directory + '"')
     translate = translations_manager.get_translateur(lang).translate
     file_name = output_directory + base_name + '-' + lang + '.html'
-    html_file = open(file_name, 'w')
-    html_file.write(ci_manager.to_html_list(order, translate))
+    html_file = open(file_name, 'wb')
+    html_file.write(ci_manager.to_html_list(order, translate).encode('utf-8'))
     html_file.close()
 
 def execute():

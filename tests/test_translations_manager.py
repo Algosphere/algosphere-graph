@@ -60,7 +60,7 @@ class TranslationsManagerTestCase(unittest.TestCase):
         translateur = self.translations_manager.get_translateur('english')
         translateur.add_translation('ci_plop', 'ci_translated')
         self.translations_manager.save_in_yaml_files()
-        with open("./tests/translations_tmp/english.yml", 'r') as yml_file:
+        with open("./tests/translations_tmp/english.yml", 'rb') as yml_file:
             translations = yaml.safe_load(yml_file)
             if translations == None:
                 translations = {}
@@ -78,7 +78,7 @@ class TranslationsManagerTestCase(unittest.TestCase):
         translations = {}
         untranslated_token = Translateur.untranslated_token()
         for lang in self.translations_manager.get_languages():
-            with open("./tests/translations_tmp/"+lang+".yml", 'r') as yml_file:
+            with open("./tests/translations_tmp/"+lang+".yml", 'rb') as yml_file:
                 translations[lang] = yaml.safe_load(yml_file)
                 if translations[lang] == None:
                     translations[lang] = {}

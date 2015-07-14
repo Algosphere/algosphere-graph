@@ -3,3 +3,5 @@ __pycache__
 *.dot
 *.html
 à_voir
+output
+.sconsign.dblite

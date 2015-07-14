@@ -6,7 +6,7 @@ from xml.dom import minidom
 from centre_of_interest import CentreOfInterest
 from mylib.string_op import replace_special_char
 import mylib.checking as checking
-from mylib.Notifier import Notifier
+from mylib.notifier import Notifier
 
 class CentresOfInterestManager:
     """

@@ -1,0 +1,65 @@
+"""
+Construction script, see http://www.scons.org
+"""
+
+import yaml
+
+def execute():
+    """ Create all rules """
+    env = Environment()
+
+    output_dir = './output'
+    translations_dir = './translations'
+
+    create_svg = Builder(action='dot -Tsvg $SOURCE > $TARGET',
+                         suffix='.svg',
+                         src_suffix='.dot')
+    env['BUILDERS']['create_svg'] = create_svg
+
+
+    update_yml = Builder(action='./fill_yaml_file.py $SOURCE $TARGET -v')
+    env['BUILDERS']['update_yml'] = update_yml
+
+    create_dot = Builder(action='./xml_to_graphviz.py $SOURCES $TARGET -v')
+    env['BUILDERS']['create_dot'] = create_dot
+
+    create_lists_by_name = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -sn')
+    env['BUILDERS']['create_lists_by_name'] = create_lists_by_name
+
+    create_lists_by_date = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -sd')
+    env['BUILDERS']['create_lists_by_date'] = create_lists_by_date
+
+
+    with open('languages.yml', 'rb') as lang_file:
+        languages = yaml.safe_load(lang_file)
+
+
+        lang_files = []
+        dot_files = {}
+        lang_targets = {}
+        yml_translations_targets = {}
+        for lang in languages:
+            lang_file = translations_dir + '/' + lang + '.yml'
+            lang_files += lang_file
+
+            lang_targets[lang] = []
+            yml_translations_targets[lang] = env.update_yml(lang_file, 'ci.xml')
+            lang_targets[lang] += yml_translations_targets[lang]
+
+            dot_files[lang] = env.create_dot(output_dir + '/ci-' + lang + '.dot',
+                                             ['ci.xml', lang_file])
+
+            lang_targets[lang] += env.create_lists_by_name(output_dir + '/ci-' + lang + '-by-name.html',
+                                                           ['ci.xml', lang_file])
+
+            lang_targets[lang] += env.create_lists_by_date(output_dir + '/ci-' + lang + '-by-date.html',
+                                                           ['ci.xml', lang_file])
+
+            lang_targets[lang] += env.create_svg(dot_files[lang])
+
+            env.Alias(lang, lang_targets[lang])
+
+        env.Alias('update_yml', lang_files)
+        env.Precious(list(yml_translations_targets.values()))
+        env.NoClean(list(yml_translations_targets.values()))
+execute()

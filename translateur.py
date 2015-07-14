@@ -10,7 +10,7 @@ class Translateur:
     @classmethod
     def untranslated_token(cls):
         """ return a token used to mark when no translation exist for a sentence """
-        return "#untranlated#"
+        return "#untranslated#"
 
     def __init__(self, lang, iso_639_1, translations):
         """

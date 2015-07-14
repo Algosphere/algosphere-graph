@@ -12,17 +12,18 @@
                           |___/          |_|
 
 ================================
-	goal
+	Goal
 ================================
 The goal of this software is to create graph of CI (center of interest) in different format, and in different language, for the algosphere alliance. (http://algosphere.org/)
 
 ================================
-	minimal configuration
+	Minimal configuration
 ================================
 You need :
 - python 3.0 or highter
 - graphviz 2.38 or highter (can certainly work with a lower version)
-
+- scons 2.3.5 or highter (can certainly work with a lower version)
+- my python_libs (git@github.com:dionisos2/python_libs.git)
 ================================
 	Authors
 ================================
@@ -45,20 +46,38 @@ Algosphere-Graph is released under the Gnu GPLv2 license.
 Please read the COPYING file for details.
 
 ================================
-	how to use
+	How to use
 ================================
 Algosphere-Graph is used by a command-line interface.
 First you need to create a xml file, where you will add all the CI. (in fact you already have a ci.xml file, almost up to date with the algosphere alliance)
 See "how to add CI" section for more information
 Next you should use a few command-line:
 
->> make
-Will create all usefull file in output
->> make mrproper
-Will delete all file in output (WARNING)
+>> scons -Q
+Will create or update all usefull files
+>> scons -Q ./output/ci-french.svg
+Will create or update the ci-french.svg file (graph picture for the french language)
+>> scons -Q french
+Will create or update all usefull files for the french language. (see the file languages.yml to know what languages you could use)
+>> scons -Q update_yml
+Will create or update the translation file in ./translations, with the new items i ci.xml
 
 ================================
-	how to add CI
+	Tranlations
+================================
+You could add new languages in language.yml file (at the root of the main directory)
+Just follow the given format "french:fr"
+To know the correspondance in the ISO 639-1 norm :
+(https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1)
+Then you could do
+>> scons -Q update_yml
+to create the all the translation files in the "translation" directory
+
+You could edit the file in "translation" to complete the translation in different languages.
+By example, you could open "translation/french.yml" and replace "a example: '#untranslated'" by "a example: 'un exemple'"
+This new translation will be taking into account in all the generated files.
+================================
+	How to add CI
 ================================
 If you want to add a new CI, look at ci.xml, the way to do it is pretty straightforward.
   <CI>
@@ -77,3 +96,13 @@ The child CI should be seen entirely as a specific way, and not partially, if pa
 Add the parents :
 It exactly the symmetry of the add of children.
 You should look through the list of CI, and if the new CI could be see as a specific way to go in the direction of the goal of this CI, you should add the new CI as a child of this CI.
+
+================================
+	Generated files
+================================
+
+file by extension:
+.html : Hypertext Markup Language file, open it with a browser (eg: firefox).
+.dot : graphviz file, open it with a text editor, this files are used to generate the .svg files
+.svg : Scalable Vector Graphics, a image file, open it with a browser or a image viewer.
+.yml : YAML file, open it with a text editor.

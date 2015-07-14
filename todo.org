@@ -39,10 +39,11 @@
    CLOSED: [2015-06-16 mar. 13:22]
 * DONE refactorization(use PEP8)
   CLOSED: [2015-07-11 sam. 22:08]
-* TODO use scons instead of makefile
+* DONE use scons instead of makefile
+  CLOSED: [2015-07-14 mar. 14:59]
 * TODO refactorization(use the properties system)
 * TODO use pytest instead of phpunit
 * TODO write the french and the english translation
-* TODO refactorize CI_list xml loading to allow multiples types of schema and have a central file for the ci names
+* TODO refactorize CentreOfInterest xml loading to allow multiples types of schema and have a central file for the ci names
 ** TODO create xml schema
 * TODO implement the upload in freemind

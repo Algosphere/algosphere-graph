@@ -58,11 +58,8 @@
    :PROPERTIES:
    :Effort:   02:30
    :END:
-** TODO write the french and the english translation
-   :PROPERTIES:
-   :Effort:   02:45
-   :END:
 ** TODO refactorize CentreOfInterest xml loading to allow multiples types of schema and have a central file for the ci names
+   CLOCK: [2015-09-21 lun. 15:39]
    :PROPERTIES:
    :Effort:   01:00
    :END:
@@ -82,4 +79,9 @@
 ** TODO create a up-to-date graph
    :PROPERTIES:
    :Effort:   04:00
+   :END:
+** TODO write the french and the english translation
+   CLOCK: [2015-09-21 lun. 15:16]--[2015-09-21 lun. 15:38] =>  0:22
+   :PROPERTIES:
+   :Effort:   02:45
    :END:

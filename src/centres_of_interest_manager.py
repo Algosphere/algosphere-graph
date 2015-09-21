@@ -2,6 +2,7 @@
 See CentresOfInterestManager class
 """
 
+from lxml import etree
 from xml.dom import minidom
 from centre_of_interest import CentreOfInterest
 from mylib.string_op import replace_special_char
@@ -15,6 +16,9 @@ class CentresOfInterestManager:
     """
     def __init__(self, list_of_ci=None, notifier=None):
         assert not(list_of_ci) or checking.is_all_instance(list_of_ci, CentreOfInterest)
+
+        self.ci_dtd = "ci.dtd"
+        self.ci_graph_dtd = "ci_graph.dtd"
         if notifier != None:
             assert isinstance(notifier, Notifier)
 
@@ -60,9 +64,18 @@ class CentresOfInterestManager:
                 return centre_of_interest
         return None
 
+    def verify_xml(self, xml_file_path, dtd_file_path):
+        with open(dtd_file_path, 'r', encoding='utf-8') as dtd_file:
+            with open(xml_file_path, 'r', encoding='utf-8') as xml_file:
+                dtd = etree.DTD(dtd_file)
+                root = etree.parse(xml_file)
+                if not dtd.validate(root):
+                    raise IOError('"' + xml_file_path + '" is not valide according to "' + dtd_file_path + '"')
+
     def load_xml(self, xml_file):
         """ load all the centres of interest from a xml file """
         self.notify('load xml_file "' + xml_file + '"')
+        self.verify_xml(xml_file, self.ci_dtd)
         self._list_of_ci = []
         doc = minidom.parse(xml_file)
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
@@ -74,6 +87,7 @@ class CentresOfInterestManager:
 
     def load_children(self, ci_graph_file):
         """ Make the link between the centres of interest and their children """
+        self.verify_xml(ci_graph_file, self.ci_graph_dtd)
         doc = minidom.parse(ci_graph_file)
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             ci_name = ci_node.getElementsByTagName("name")[0].firstChild.nodeValue

@@ -65,7 +65,9 @@
    :PROPERTIES:
    :Effort:   01:00
    :END:
-** TODO create xml verification schemas
+** DONE create xml verification schemas
+   CLOSED: [2015-09-21 lun. 19:00]
+   CLOCK: [2015-09-21 lun. 18:19]--[2015-09-21 lun. 19:00] =>  0:41
    :PROPERTIES:
    :Effort:   01:00
    :END:

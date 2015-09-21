@@ -1,0 +1,5 @@
+<!ELEMENT CI_list (CI*) >
+<!ELEMENT CI (name, children) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT children (child*) >
+<!ELEMENT child (#PCDATA) >

@@ -1,0 +1,5 @@
+<!ELEMENT CI_list (CI*) >
+<!ELEMENT CI (name, date, url) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT date (#PCDATA) >
+<!ELEMENT url (#PCDATA) >

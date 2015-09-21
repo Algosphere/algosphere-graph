@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<CI_list>
+  <CI>
+	<name>ci_1</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>ci_2</name>
+	<children>
+	  <child></child>
+	</children>
+  </CI>
+  <CI>
+	<name>ci_3</name>
+	<children>
+	  <child>ci_2</child>
+	</children>
+  </CI>
+  <CI>
+	<name>ci_4</name>
+	<children>
+	  <child>ci_1</child>
+	  <child>ci_3</child>
+	</children>
+  </CI>
+  <CI>
+	<name>ci_5</name>
+	<children>
+	  <child>ci_1</child>
+	  <child>ci_2</child>
+	</children>
+  </CI>
+</CI_list>

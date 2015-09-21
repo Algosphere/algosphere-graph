@@ -21,6 +21,7 @@ from mylib.notifier import Notifier
 
 def create_graph_for_language(translations_manager,
                               ci_manager,
+                              ci_graph_file,
                               lang_file,
                               output_file,
                               notifier):
@@ -34,15 +35,18 @@ def create_graph_for_language(translations_manager,
     translate = translations_manager.get_translateur(lang).translate
 
     yaml_file = open(output_file, 'wb')
-    yaml_file.write(ci_manager.to_graphviz(translate).encode('utf-8'))
+    yaml_file.write(ci_manager.to_graphviz(ci_graph_file, translate).encode('utf-8'))
     yaml_file.close()
 
 def execute():
     """ Execute the script, see module docstring for more details """
     parser = argparse.ArgumentParser(description='Create a graph of ci in a dot file(graphviz).')
 
-    parser.add_argument('data_file',
-                        help='the xml file of CI')
+    parser.add_argument('ci_file',
+                        help='the xml file of the list CI')
+
+    parser.add_argument('ci_graph_file',
+                        help='the xml file of the graph of CI')
 
     parser.add_argument('lang_file',
                         help='The yml file used to translation')
@@ -58,12 +62,13 @@ def execute():
 
 
     ci_manager = CentresOfInterestManager([], notifier)
-    ci_manager.load_xml(args.data_file)
+    ci_manager.load_xml(args.ci_file)
 
     translations_manager = TranslationsManager(notifier)
 
     create_graph_for_language(translations_manager,
                               ci_manager,
+                              args.ci_graph_file,
                               args.lang_file,
                               args.output_file,
                               notifier)

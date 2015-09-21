@@ -83,11 +83,25 @@ If you want to add a new CI, look at ci.xml, the way to do it is pretty straight
   <CI>
 	<name>Original name of the CI</name>
 	<url>Official url of the CI</url>
+	<date>2013-11-24</date>
+  </CI>
+
+================================
+	Utility graph
+================================
+The main graph of this program is the 'utility' graph, you could find it in "ci-utility.xml"
+When you add a new CI, to update the utility graph you should do two complex task:
+- add the children of this CI
+- and add the parents of this CI.
+
+ex:
+  <CI>
+	<name>Name of the new CI</name>
 	<children>
-	//Original name of the children of the CI between "<child></child>" balises.
+		<child>Name of a child CI</child>
+		<child>Name of another child CI</child>
 	</children>
   </CI>
-When you add a new CI, you should do two complex task, add the children of this CI, and add the parents of this CI.
 
 Add the children :
 You should look through the list of CI, and whenever you find a CI that could be see as a specific way to go in the direction of the goal of the new CI, you should add it as a child of the new CI.

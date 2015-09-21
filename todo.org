@@ -58,8 +58,10 @@
    :PROPERTIES:
    :Effort:   02:30
    :END:
-** TODO refactorize CentreOfInterest xml loading to allow multiples types of schema and have a central file for the ci names
-   CLOCK: [2015-09-21 lun. 15:39]
+** DONE refactorize CentreOfInterest xml loading to allow multiples types of schema and have a central file for the ci names
+   CLOSED: [2015-09-21 lun. 18:19]
+   CLOCK: [2015-09-21 lun. 17:43]--[2015-09-21 lun. 18:19] =>  0:36
+   CLOCK: [2015-09-21 lun. 15:39]--[2015-09-21 lun. 15:56] =>  0:17
    :PROPERTIES:
    :Effort:   01:00
    :END:

@@ -53,7 +53,7 @@ def execute():
             lang_targets[lang] += yml_translations_targets[lang]
 
             dot_files[lang] = env.create_dot(output_dir + '/ci-' + lang + '.dot',
-                                             ['ci.xml', lang_file])
+                                             ['ci.xml', 'ci-utility.xml', lang_file])
 
             lang_targets[lang] += env.create_lists_by_name(output_dir + '/ci-' + lang + '-by-name.html',
                                                            ['ci.xml', lang_file])

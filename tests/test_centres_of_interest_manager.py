@@ -47,6 +47,7 @@ def test_load_xml():
     """ Test the load_xml method """
     ci_manager = get_ci_manager()
     ci_manager.load_xml("tests/ci.xml")
+    ci_manager.load_children("tests/ci-utility.xml")
     assert len(ci_manager) == 5
     ci_1 = ci_manager.find("ci_1")
     ci_2 = ci_manager.find("ci_2")
@@ -69,12 +70,14 @@ def test_load_xml_with_bad_xml():
     ci_manager = get_ci_manager()
     with pytest.raises(ValueError):
         ci_manager.load_xml("tests/bad_ci.xml")
+        ci_manager.load_children("tests/bad_ci.xml")
 
 def test_load_xml_with_bad_xml2():
     """ Test the load_xml_with_bad_xml method """
     ci_manager = get_ci_manager()
     with pytest.raises(ValueError):
         ci_manager.load_xml("tests/bad_ci2.xml")
+        ci_manager.load_children("tests/bad_ci2.xml")
 
 def test_sorted_by_name():
     """ Test the sorted_by_name method """

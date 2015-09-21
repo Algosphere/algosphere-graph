@@ -72,13 +72,15 @@ class CentresOfInterestManager:
             centre_of_interest = CentreOfInterest(name, url, date)
             self.append(centre_of_interest)
 
-        self._load_children(doc)
-
-    def _load_children(self, doc):
+    def load_children(self, ci_graph_file):
         """ Make the link between the centres of interest and their children """
+        doc = minidom.parse(ci_graph_file)
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             ci_name = ci_node.getElementsByTagName("name")[0].firstChild.nodeValue
             centre_of_interest = self.find(ci_name)
+            if centre_of_interest == None:
+                raise ValueError('"' + ci_name + '" found in "'+
+                                 ci_graph_file + '" doesn’t exist in ci.xml')
             children_node = ci_node.getElementsByTagName("children")[0]
             for child in children_node.getElementsByTagName("child"):
                 if child.firstChild == None:
@@ -86,6 +88,7 @@ class CentresOfInterestManager:
                 else:
                     child_name = child.firstChild.nodeValue
                 child_ci = self.find(child_name)
+
                 if child_ci != None:
                     centre_of_interest.add_child(child_ci)
                 else:
@@ -194,7 +197,7 @@ class CentresOfInterestManager:
 
         return string
 
-    def to_graphviz(self, translate=None):
+    def to_graphviz(self, ci_graph_file, translate=None):
         """
         Export the sorted list of CI to a graphviz dot format.
 
@@ -203,6 +206,8 @@ class CentresOfInterestManager:
         :type translate: function
         :return: return a string corresponding of the dot file
         """
+
+        self.load_children(ci_graph_file)
         if translate == None:
             translate = lambda x: x
 

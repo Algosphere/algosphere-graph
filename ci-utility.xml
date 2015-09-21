@@ -1,0 +1,510 @@
+<?xml version="1.0" ?>
+<CI_list>
+  <CI>
+	<name>Agenda à court terme &lt; 6 mois</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>AlgoJobs et bons plans</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Algopublishing</name>
+	<children>
+	  <child>Newsletter</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Allègement concret immédiat</name>
+	<children>
+	  <child>Autonomie personnelle</child>
+	  <child>Fin de vie sans souffrance évitable</child>
+	  <child>Méditation</child>
+	  <child>Souffrance vécue</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Animaux non-humains</name>
+	<children>
+	  <child>Sensibiliser à la souffrance animale</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Annuaire des forces contribuant à l'allègement de la souffrance - Chantier</name>
+	<children>
+	  <child>Collaboration Ukratio</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Autonomie personnelle</name>
+	<children>
+	  <child>Avortement</child>
+	  <child>Complémentaires santé</child>
+	  <child>Développer les connaissances de chacun</child>
+	  <child>Droits humains</child>
+	  <child>Méditation</child>
+	  <child>Réseaux de proximité</child>
+	  <child>Revenu Universel</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Avortement</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Bouddhisme</name>
+	<children>
+	  <child>Méditation</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Camus</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Codes culturels</name>
+	<children>
+	  <child>Musique</child>
+	  <child>Vers des langues vivantes non-sexistes</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Collaboration Ukratio</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Community Management</name>
+	<children>
+	  <child>Diversité linguistique en démocratie directe mondiale</child>
+	  <child>Parcours d'accueil</child>
+	  <child>Algopublishing</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Complémentaires santé</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Conscience étendue</name>
+	<children>
+	  <child>Formation à la conscience étendue</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Cross-fertilization</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Développer les connaissances de chacun</name>
+	<children>
+	  <child>Formation à la conscience étendue</child>
+	  <child>Institutionnalisation d'une nouvelle discipline sur la souffrance</child>
+	  <child>Système interactif de questions-réponses sur le domaine de la souffrance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Discriminations contre les célibataires et les solos</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Diversité linguistique en démocratie directe mondiale</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Domaines d'intervention et types d'action</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Droit de disposer de son corps</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Droits humains</name>
+	<children>
+	  <child>Droit de disposer de son corps</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Économie</name>
+	<children>
+	  <child>Revenu Universel</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Encyclopédie des problèmes mondiaux et du potentiel humain</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Éthique prioritariste</name>
+	<children>
+	  <child>Éthique prioritariste de l'alliance</child>
+	  <child>Évaluations éthiques d'un point de vue prioritariste</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Éthique prioritariste de l'alliance</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Évaluation éthique des acteurs</name>
+	<children>
+	  <child>Évaluations éthiques d'un point de vue prioritariste</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Évaluations éthiques d'un point de vue prioritariste</name>
+	<children>
+	  <child>Bouddhisme</child>
+	  <child>Économie</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Féminisme</name>
+	<children>
+	  <child>Avortement</child>
+	  <child>Droits humains</child>
+	  <child>Mutilation génitale féminine (excision...)</child>
+	  <child>Mutilation génitale masculine (circoncision...)</child>
+	  <child>Mutilation génitale transgenre</child>
+	  <child>Vers des langues vivantes non-sexistes</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Fin de vie sans souffrance évitable</name>
+	<children>
+	  <child>Avortement</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Financement de l'allègement de la souffrance</name>
+	<children>
+	  <child>AlgoJobs et bons plans</child>
+	  <child>Partenaire du monde économique</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Formation à la conscience étendue</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Freins à une culture d'allègement de la souffrance</name>
+	<children>
+	  <child>Discriminations contre les célibataires et les solos</child>
+	  <child>Laïcité</child>
+	  <child>Féminisme</child>
+	  <child>Kiddisme</child>
+	  <child>Rire de la souffrance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Identité de l'alliance</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Institutionnalisation d'une nouvelle discipline sur la souffrance</name>
+	<children>
+	  <child>Outils de mesure et cartographie de la souffrance</child>
+	  <child>Sociologie de la souffrance</child>
+	  <child>Manuel d'algonomie</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Kiddisme</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Laïcité</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Le socle : une alliance</name>
+	<children>
+	  <child>Agenda à court terme &lt; 6 mois</child>
+	  <child>Moyen terme : 6 mois &lt; 3 ans</child>
+	  <child>Prospective > 3 ans</child>
+	  <child>Community Management</child>
+	  <child>Identité de l'alliance</child>
+	  <child>Domaines d'intervention et types d'action</child>
+	  <child>Système d'information - Conseil Communication</child>
+	  <child>Règles de fonctionnement</child>
+	  <child>Ressources de l'alliance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Manuel d'algonomie</name>
+	<children>
+	  <child>Encyclopédie des problèmes mondiaux et du potentiel humain</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Méditation</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Moyen terme : 6 mois &lt; 3 ans</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Musique</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Mutilation génitale féminine (excision...)</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Mutilation génitale masculine (circoncision...)</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Mutilation génitale transgenre</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Newsletter</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Organiser l'allègement de la souffrance</name>
+	<children>
+	  <child>Orientation Culture</child>
+	  <child>Orientation Action Concrète</child>
+	  <child>Orientation Connaissance</child>
+	  <child>Le socle : une alliance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Orientation Action Concrète</name>
+	<children>
+	  <child>Animaux non-humains</child>
+	  <child>Allègement concret immédiat</child>
+	  <child>Soutenir les organisations contribuant à l'allègement de la souffrance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Orientation Connaissance</name>
+	<children>
+	  <child>Institutionnalisation d'une nouvelle discipline sur la souffrance</child>
+	  <child>Évaluation éthique des acteurs</child>
+	  <child>Animaux non-humains</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Orientation Culture</name>
+	<children>
+	  <child>Animaux non-humains</child>
+	  <child>Veille médiatique</child>
+	  <child>Algopublishing</child>
+	  <child>Camus</child>
+	  <child>Développer les connaissances de chacun</child>
+	  <child>Conscience étendue</child>
+	  <child>Éthique prioritariste</child>
+	  <child>Freins à une culture d'allègement de la souffrance</child>
+	  <child>Codes culturels</child>
+	  <child>Institutionnalisation d'une nouvelle discipline sur la souffrance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Outils de mesure et cartographie de la souffrance</name>
+	<children>
+	  <child>Souffrance vécue</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Parcours d'accueil</name>
+	<children>
+	  <child>Plan d'invitation</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Partenaire du monde économique</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Plan d'invitation</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Plateforme Collaborative de l'Alliance</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Présentation officielle de l'Alliance</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Processus de décision</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Prospective > 3 ans</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Règles de fonctionnement</name>
+	<children>
+	  <child>Processus de décision</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Réseaux de proximité</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Ressources de l'alliance</name>
+	<children>
+	  <child>Soutien administratif de l'Alliance</child>
+	  <child>Financement de l'allègement de la souffrance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Revenu Universel</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Rire de la souffrance</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Sensibiliser à la souffrance animale</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Site internet public de l'alliance : forme et contenu</name>
+	<children>
+	  <child>Présentation officielle de l'Alliance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Sociologie de la souffrance</name>
+	<children>
+	  <child>Outils de mesure et cartographie de la souffrance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Souffrance vécue</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Soutenir les organisations contribuant à l'allègement de la souffrance</name>
+	<children>
+	  <child>Annuaire des forces contribuant à l'allègement de la souffrance - Chantier</child>
+	  <child>Cross-fertilization</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Soutien administratif de l'Alliance</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Système d'information - Conseil Communication</name>
+	<children>
+	  <child>Plateforme Collaborative de l'Alliance</child>
+	  <child>Site internet public de l'alliance : forme et contenu</child>
+	  <child>Webmaster Team</child>
+	  <child>Archives Algosphere Alliance</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Système interactif de questions-réponses sur le domaine de la souffrance</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Veille médiatique</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Vers des langues vivantes non-sexistes</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Webmaster Team</name>
+	<children>
+	  <child>Meetings du Conseil Communication 2014</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Meetings du Conseil Communication 2014</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Archives Algosphere Alliance</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Agora</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Agora</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Centre d'intérêt - modèle</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Questions-suggestions-critiques</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>AlgoNews</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Annuaire des invités inscrits et des alliés</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Annuaire des alliés, invités  Chantier</name>
+	<children>
+	</children>
+  </CI>
+</CI_list>

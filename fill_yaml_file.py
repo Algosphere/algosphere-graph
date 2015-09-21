@@ -7,6 +7,9 @@ for the choosen languages.
 Usage: see '>>fill_yaml_file.py --help'
 """
 
+import sys
+sys.path.append('src')
+
 import argparse
 from centres_of_interest_manager import CentresOfInterestManager
 from translations_manager import TranslationsManager

@@ -1,79 +1,97 @@
 """
 Test CentresOfInterestManager class
 """
-
-import unittest
 #from proboscis import test # maybe we should use it for adding dependencies between test
 
-# sys.path.append("..")
+import pytest
+import sys
+
+sys.path.append('src')
 
 from centre_of_interest import CentreOfInterest
 from centres_of_interest_manager import CentresOfInterestManager
 
-class CentresOfInterestManagerTestCase(unittest.TestCase):
-    """ A classic test class """
 
-    def setUp(self):
-        self.ci1 = CentreOfInterest("ci1")
-        self.ci2 = CentreOfInterest("ci2")
-        self.ci3 = CentreOfInterest("ci3")
-        self.ci_manager = CentresOfInterestManager([self.ci1, self.ci2])
+def get_ci_manager():
+    ci1 = CentreOfInterest("ci1")
+    ci2 = CentreOfInterest("ci2")
+    ci_manager = CentresOfInterestManager([ci1, ci2])
+    return ci_manager
 
-    def test_append(self):
-        """ Test the append method """
-        self.ci_manager.append(self.ci3)
-        self.assertEqual(self.ci_manager.list_of_ci, [self.ci1, self.ci2, self.ci3])
+def test_append():
+    """ Test the append method """
+    ci_manager = get_ci_manager()
+    ci1 = ci_manager._list_of_ci[0]
+    ci2 = ci_manager._list_of_ci[1]
+    ci3 = CentreOfInterest("ci3")
+    ci_manager.append(ci3)
+    assert ci_manager.list_of_ci == [ci1, ci2, ci3]
 
-    def test_iter(self):
-        """ Test the __iter__ method """
-        for (have, want) in zip(self.ci_manager, [self.ci1, self.ci2]):
-            with self.subTest(i=(have, want)):
-                self.assertEqual(have, want)
+def test_iter():
+    """ Test the __iter__ method """
+    ci_manager = get_ci_manager()
+    ci1 = ci_manager._list_of_ci[0]
+    ci2 = ci_manager._list_of_ci[1]
+    for (have, want) in zip(ci_manager, [ci1, ci2]):
+        assert have == want
 
-    def test_find(self):
-        """ Test the find method """
-        self.assertEqual(self.ci_manager.find("ci2"), self.ci2)
-        self.assertEqual(self.ci_manager.find("unknow"), None)
+def test_find():
+    """ Test the find method """
+    ci_manager = get_ci_manager()
+    ci1 = ci_manager._list_of_ci[0]
+    ci2 = ci_manager._list_of_ci[1]
+    assert ci_manager.find("ci2") == ci2
+    assert ci_manager.find("unknow") == None
 
-    def test_load_xml(self):
-        """ Test the load_xml method """
-        self.ci_manager.load_xml("tests/ci.xml")
-        self.assertEqual(len(self.ci_manager), 5)
-        ci_1 = self.ci_manager.find("ci_1")
-        ci_2 = self.ci_manager.find("ci_2")
-        ci_3 = self.ci_manager.find("ci_3")
-        ci_4 = self.ci_manager.find("ci_4")
-        ci_5 = self.ci_manager.find("ci_5")
-        list_of_ci = [ci_1, ci_2, ci_3, ci_4, ci_5]
+def test_load_xml():
+    """ Test the load_xml method """
+    ci_manager = get_ci_manager()
+    ci_manager.load_xml("tests/ci.xml")
+    assert len(ci_manager) == 5
+    ci_1 = ci_manager.find("ci_1")
+    ci_2 = ci_manager.find("ci_2")
+    ci_3 = ci_manager.find("ci_3")
+    ci_4 = ci_manager.find("ci_4")
+    ci_5 = ci_manager.find("ci_5")
+    list_of_ci = [ci_1, ci_2, ci_3, ci_4, ci_5]
 
-        for (i, centre_of_interest) in zip(range(1, len(list_of_ci)+1), list_of_ci):
-            with self.subTest(i=i):
-                self.assertEqual(centre_of_interest.url, "url"+str(i))
+    for (i, centre_of_interest) in zip(range(1, len(list_of_ci)+1), list_of_ci):
+        assert centre_of_interest.url == "url"+str(i)
 
-        self.assertEqual(ci_1.children, [])
-        self.assertEqual(ci_2.children, [])
-        self.assertEqual(ci_3.children, [ci_2])
-        self.assertEqual(ci_4.children, [ci_1, ci_3])
-        self.assertEqual(ci_5.children, [ci_1, ci_2])
+    assert ci_1.children == []
+    assert ci_2.children == []
+    assert ci_3.children == [ci_2]
+    assert ci_4.children == [ci_1, ci_3]
+    assert ci_5.children == [ci_1, ci_2]
 
-    def test_load_xml_with_bad_xml(self):
-        """ Test the load_xml_with_bad_xml method """
-        self.assertRaises(ValueError, self.ci_manager.load_xml, "tests/bad_ci.xml")
+def test_load_xml_with_bad_xml():
+    """ Test the load_xml_with_bad_xml method """
+    ci_manager = get_ci_manager()
+    with pytest.raises(ValueError):
+        ci_manager.load_xml("tests/bad_ci.xml")
 
-    def test_load_xml_with_bad_xml2(self):
-        """ Test the load_xml_with_bad_xml method """
-        self.assertRaises(ValueError, self.ci_manager.load_xml, "tests/bad_ci2.xml")
+def test_load_xml_with_bad_xml2():
+    """ Test the load_xml_with_bad_xml method """
+    ci_manager = get_ci_manager()
+    with pytest.raises(ValueError):
+        ci_manager.load_xml("tests/bad_ci2.xml")
 
-    def test_sorted_by_name(self):
-        """ Test the sorted_by_name method """
-        self.ci_manager = CentresOfInterestManager([self.ci2, self.ci1, self.ci3])
-        self.assertEqual(self.ci_manager.sorted_by_name(), [self.ci1, self.ci2, self.ci3])
+def test_sorted_by_name():
+    """ Test the sorted_by_name method """
+    ci1 = CentreOfInterest("ci1")
+    ci2 = CentreOfInterest("ci2")
+    ci3 = CentreOfInterest("ci3")
+    ci_manager = CentresOfInterestManager([ci2, ci1, ci3])
+    assert ci_manager.sorted_by_name() == [ci1, ci2, ci3]
 
-    def test_sorted_by_date(self):
-        """ Test the sorted_by_date method """
-        self.ci1.date = "2014-01-02"
-        self.ci2.date = "2014-01-02"
-        self.ci3.date = "2014-01-01"
-        self.ci_manager = CentresOfInterestManager([self.ci2, self.ci1, self.ci3])
+def test_sorted_by_date():
+    """ Test the sorted_by_date method """
+    ci1 = CentreOfInterest("ci1")
+    ci2 = CentreOfInterest("ci2")
+    ci3 = CentreOfInterest("ci3")
+    ci1.date = "2014-01-02"
+    ci2.date = "2014-01-02"
+    ci3.date = "2014-01-01"
+    ci_manager = CentresOfInterestManager([ci2, ci1, ci3])
 
-        self.assertEqual(self.ci_manager.sorted_by_date(), [self.ci3, self.ci1, self.ci2])
+    assert ci_manager.sorted_by_date() == [ci3, ci1, ci2]

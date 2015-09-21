@@ -9,7 +9,11 @@ command line to transform ci.dot in ci.svg :
 dot -Tsvg ci.dot > ci.svg
 """
 
+import sys
 import argparse
+
+sys.path.append('src')
+
 
 from centres_of_interest_manager import CentresOfInterestManager
 from translations_manager import TranslationsManager

@@ -11,6 +11,8 @@ dot -Tsvg ci.dot > ci.svg
 
 
 import sys
+sys.path.append('src')
+
 from centres_of_interest_manager import CentresOfInterestManager
 
 if len(sys.argv) != 2:

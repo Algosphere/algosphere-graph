@@ -7,7 +7,10 @@ Usage: see '>>xml_to_html_list.py --help'
 """
 
 
+import sys
 import argparse
+sys.path.append('src')
+
 from centres_of_interest_manager import CentresOfInterestManager
 from translations_manager import TranslationsManager
 from mylib.notifier import Notifier

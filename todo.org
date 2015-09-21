@@ -51,7 +51,10 @@
    :PROPERTIES:
    :Effort:   02:00
    :END:
-** TODO use pytest instead of phpunit
+** DONE use pytest instead of phpunit
+   CLOSED: [2015-09-21 lun. 15:13]
+   CLOCK: [2015-09-21 lun. 13:53]--[2015-09-21 lun. 15:13] =>  1:20
+   CLOCK: [2015-09-21 lun. 12:08]--[2015-09-21 lun. 12:41] =>  0:33
    :PROPERTIES:
    :Effort:   02:30
    :END:

@@ -5,3 +5,4 @@ __pycache__
 à_voir
 output
 .sconsign.dblite
+.coverage

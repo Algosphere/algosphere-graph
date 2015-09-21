@@ -25,18 +25,18 @@ class Translateur:
         :type translations: dict
         """
 
-        self.lang = lang
-        self.iso_639_1 = iso_639_1
-        self.translations = translations
+        self._lang = lang
+        self._iso_639_1 = iso_639_1
+        self._translations = translations
 
     def translate(self, sentence):
         """ Translate a particular sentence """
         assert isinstance(sentence, str)
-        if sentence in self.translations:
-            if self.translations[sentence] == self.untranslated_token():
+        if sentence in self._translations:
+            if self._translations[sentence] == self.untranslated_token():
                 return sentence + ' ' + self.untranslated_token()
             else:
-                return self.translations[sentence]
+                return self._translations[sentence]
         else:
             return None
 
@@ -53,7 +53,7 @@ class Translateur:
 
         assert isinstance(sentence, str)
         assert isinstance(translation, str)
-        if sentence in self.translations:
+        if sentence in self._translations:
             raise ValueError('sentence "' + sentence + '" is already translated')
         else:
-            self.translations[sentence] = translation
+            self._translations[sentence] = translation

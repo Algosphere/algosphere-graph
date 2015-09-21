@@ -5,20 +5,20 @@ See CentreOfInterest(CI) class.
 class CentreOfInterest:
     """ A centre of interest(CI), linked to the algosphere alliance or to one of his CI"""
     def __init__(self, name, url="", date=None, children=None, translations=None):
-        self.name = name
-        self.url = url
-        self.date = date # connection date of the CI
+        self._name = name
+        self._url = url
+        self._date = date
 
         # ci which are more specific than this ci
         if children == None:
-            self.children = []
+            self._children = []
         else:
-            self.children = children
+            self._children = children
 
         if translations == None:
-            self.translations = {}
+            self._translations = {}
         else:
-            self.translations = translations
+            self._translations = translations
 
     def __str__(self):
         tmp = "-"*10 + "CI" + "-"*10 + "\n"
@@ -29,50 +29,58 @@ class CentreOfInterest:
     def add_child(self, child):
         """ add a child CI """
         assert isinstance(child, CentreOfInterest)
-        self.children.append(child)
+        self._children.append(child)
 
-    def get_children(self):
+    @property
+    def children(self):
         """ get all the child CI of this CI """
-        return self.children
+        return self._children
 
     def add_translation(self, lang, translation):
         """ add a translation of the name of the CI in the language 'lang'"""
         assert isinstance(lang, str)
         assert isinstance(translation, str)
-        self.translations[lang] = translation
+        self._translations[lang] = translation
 
-    def get_translations(self):
+    @property
+    def translations(self):
         """ get all translation """
-        return self.translations
+        return self._translations
 
     def translate(self, lang):
         """ translate the name of the CI in langage 'lang' """
         assert isinstance(lang, str)
-        if lang in self.translations:
-            return self.translations[lang]
+        if lang in self._translations:
+            return self._translations[lang]
         else:
             return None
 
-    def get_date(self):
-        """ get the date when the CI have be had """
-        return self.date
+    @property
+    def date(self):
+        """ Date of the CI connection to the algosphere alliance """
+        return self._date
 
-    def set_date(self, date):
-        """ see get_date """
-        self.date = date
+    @date.setter
+    def date(self, date):
+        """ See date property """
+        self._date = date
 
-    def get_name(self):
-        """ get the name of the CI """
-        return self.name
+    @property
+    def name(self):
+        """ Name of the CI """
+        return self._name
 
-    def set_name(self, name):
+    @name.setter
+    def name(self, name):
         """ see get_name """
-        self.name = name
+        self._name = name
 
-    def get_url(self):
-        """ get the url of the CI """
-        return self.url
+    @property
+    def url(self):
+        """ Url of the CI """
+        return self._url
 
-    def set_url(self, url):
+    @url.setter
+    def url(self, url):
         """ see get_url """
-        self.url = url
+        self._url = url

@@ -18,36 +18,37 @@ class CentresOfInterestManager:
         if notifier != None:
             assert isinstance(notifier, Notifier)
 
-        self.notifier = notifier
+        self._notifier = notifier
         if list_of_ci == None:
-            self.list_of_ci = []
+            self._list_of_ci = []
         else:
-            self.list_of_ci = list_of_ci
+            self._list_of_ci = list_of_ci
 
     def notify(self, text):
         """ notify something happening to the user (use the Notifier object) """
-        if self.notifier != None:
-            self.notifier.notify(text)
+        if self._notifier != None:
+            self._notifier.notify(text)
 
     def __iter__(self):
-        for centre_of_interest in self.list_of_ci:
+        for centre_of_interest in self._list_of_ci:
             yield centre_of_interest
 
     def __len__(self):
-        return len(self.list_of_ci)
+        return len(self._list_of_ci)
 
-    def get_list_of_ci(self):
+    @property
+    def list_of_ci(self):
         """ get the list of ci managed """
-        return self.list_of_ci
+        return self._list_of_ci
 
     def append(self, centre_of_interest):
         """ add a new centre of interest to be managed """
         assert isinstance(centre_of_interest, CentreOfInterest)
-        self.list_of_ci.append(centre_of_interest)
+        self._list_of_ci.append(centre_of_interest)
 
     def __str__(self):
         tmp = ""
-        for centre_of_interest in self.list_of_ci:
+        for centre_of_interest in self._list_of_ci:
             tmp += str(centre_of_interest)
         return tmp
 
@@ -62,7 +63,7 @@ class CentresOfInterestManager:
     def load_xml(self, xml_file):
         """ load all the centres of interest from a xml file """
         self.notify('load xml_file "' + xml_file + '"')
-        self.list_of_ci = []
+        self._list_of_ci = []
         doc = minidom.parse(xml_file)
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             name = self._get_element(ci_node, "name")
@@ -111,9 +112,9 @@ class CentresOfInterestManager:
         :type translate: function
         """
         if translate != None:
-            return sorted(self.list_of_ci, key=lambda ci: translate(ci.get_name()))
+            return sorted(self._list_of_ci, key=lambda ci: translate(ci.name))
         else:
-            return sorted(self.list_of_ci, key=lambda ci: ci.get_name())
+            return sorted(self._list_of_ci, key=lambda ci: ci.name)
 
     def sorted_by_date(self, translate=None):
         """
@@ -130,12 +131,12 @@ class CentresOfInterestManager:
 
         def get_date_name(centre_of_interest):
             """ return a couple (ci_date, ci_name), to sort the list """
-            if centre_of_interest.get_date() != None:
-                return (centre_of_interest.get_date(), translate(centre_of_interest.get_name()))
+            if centre_of_interest.date != None:
+                return (centre_of_interest.date, translate(centre_of_interest.name))
             else:
-                return ("", translate(centre_of_interest.get_name()))
+                return ("", translate(centre_of_interest.name))
 
-        return sorted(self.list_of_ci, key=get_date_name)
+        return sorted(self._list_of_ci, key=get_date_name)
 
     def to_html_list(self, order="by_name", translate=None):
         """
@@ -167,7 +168,7 @@ class CentresOfInterestManager:
             raise ValueError("order should be 'by_name', or 'by_date'. '"+order+"' given.")
 
         if (order == "by_date")and(len(sorted_list_of_ci) > 0):
-            date = sorted_list_of_ci[0].get_date()
+            date = sorted_list_of_ci[0].date
             if date != None:
                 str_date = date
             else:
@@ -175,8 +176,8 @@ class CentresOfInterestManager:
             string += '      <h2>'+str_date+'</h2>'
 
         for centre_of_interest in sorted_list_of_ci:
-            if (order == "by_date")and(centre_of_interest.get_date() != date):
-                date = centre_of_interest.get_date()
+            if (order == "by_date")and(centre_of_interest.date != date):
+                date = centre_of_interest.date
                 if date != None:
                     str_date = date
                 else:
@@ -184,8 +185,8 @@ class CentresOfInterestManager:
 
                 string += '      <h2>'+str_date+'</h2>'
 
-            string += '      <li><a href="' + centre_of_interest.get_url() + '">' + \
-                      translate(centre_of_interest.get_name()) + '</a></li>\n'
+            string += '      <li><a href="' + centre_of_interest.url + '">' + \
+                      translate(centre_of_interest.name) + '</a></li>\n'
 
         string += "    </ul>\n"
         string += "  </body>\n"
@@ -208,11 +209,11 @@ class CentresOfInterestManager:
         string = "digraph CI {\n"
         string += '    node [fontcolor=blue, fontsize=8];\n'
         for centre_of_interest in self:
-            string += '    "' + translate(centre_of_interest.get_name()) +\
+            string += '    "' + translate(centre_of_interest.name) +\
                       '"[URL="'+centre_of_interest.url+ '"];\n'
-            for child in centre_of_interest.get_children():
-                string += '    "' + translate(centre_of_interest.get_name()) +\
-                          '"->"' + translate(child.get_name()) + '";\n'
+            for child in centre_of_interest.children:
+                string += '    "' + translate(centre_of_interest.name) +\
+                          '"->"' + translate(child.name) + '";\n'
         string += "}"
 
         return replace_special_char(string)

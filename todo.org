@@ -1,49 +1,81 @@
-* DONE implement a unit tests system
-  CLOSED: [2014-10-10 ven. 16:14]
-** DONE find and learn to use a good unit tests system for python
-   CLOSED: [2014-10-10 ven. 12:28]
-** DONE tests all the already developped functionalities
+* algosphere_graph
+         :PROPERTIES:
+         :COLUMNS:  %100ITEM %TODO %Effort{:} %CLOCKSUM
+         :END:
+** DONE implement a unit tests system
    CLOSED: [2014-10-10 ven. 16:14]
-* DONE implement the download of child CI
-  CLOSED: [2014-10-10 ven. 16:15]
-* DONE implement the upload in graphviz format for child CI
-  CLOSED: [2014-10-10 ven. 16:45]
-* DONE write a explanation about how the CI are organized in the readme file
-  CLOSED: [2014-10-10 ven. 19:18]
-* DONE write a makefile to produce all output easely
-  CLOSED: [2014-10-12 dim. 09:17]
-* DONE add clickable link
-  CLOSED: [2014-10-12 dim. 10:08]
-* DONE fix the organization mistake in ci.xml
-  CLOSED: [2014-10-12 dim. 12:08]
-* DONE add acceptation date of CI in ci.xml
-  CLOSED: [2014-10-12 dim. 14:02]
-* DONE implement the upload in a list format (sorted by name or by date)
-  CLOSED: [2014-10-12 dim. 15:48]
-* DONE add notification system
-  CLOSED: [2015-06-16 mar. 06:59]
-** DONE add notification system for xml_to_graphviz
-   CLOSED: [2015-06-16 mar. 06:52]
-** DONE add notification system for xml_to_html_list
-   CLOSED: [2015-06-16 mar. 06:58]
-* DONE ne présenter que l’interface utilisateur dans le makefile avec la complétion automatique
-  CLOSED: [2015-06-25 jeu. 18:57]
-  pas trouver de moyen de le faire, just ajouter un "_" devant les noms des règles intermédiaires
-* DONE implement the translation system
-  CLOSED: [2015-06-16 mar. 13:22]
-** DONE faire en sorte que makefile crée les svg demandé
-   CLOSED: [2015-06-16 mar. 11:30]
-** DONE vérifier que les svg sont traduit correctement
-   CLOSED: [2015-06-16 mar. 12:04]
-** DONE implémenter le système de traduction pour les listes
+*** DONE find and learn to use a good unit tests system for python
+   	CLOSED: [2014-10-10 ven. 12:28]
+*** DONE tests all the already developped functionalities
+   	CLOSED: [2014-10-10 ven. 16:14]
+** DONE implement the download of child CI
+   CLOSED: [2014-10-10 ven. 16:15]
+** DONE implement the upload in graphviz format for child CI
+   CLOSED: [2014-10-10 ven. 16:45]
+** DONE write a explanation about how the CI are organized in the readme file
+   CLOSED: [2014-10-10 ven. 19:18]
+** DONE write a makefile to produce all output easely
+   CLOSED: [2014-10-12 dim. 09:17]
+** DONE add clickable link
+   CLOSED: [2014-10-12 dim. 10:08]
+** DONE fix the organization mistake in ci.xml
+   CLOSED: [2014-10-12 dim. 12:08]
+** DONE add acceptation date of CI in ci.xml
+   CLOSED: [2014-10-12 dim. 14:02]
+** DONE implement the upload in a list format (sorted by name or by date)
+   CLOSED: [2014-10-12 dim. 15:48]
+** DONE add notification system
+   CLOSED: [2015-06-16 mar. 06:59]
+*** DONE add notification system for xml_to_graphviz
+   	CLOSED: [2015-06-16 mar. 06:52]
+*** DONE add notification system for xml_to_html_list
+   	CLOSED: [2015-06-16 mar. 06:58]
+** DONE ne présenter que l’interface utilisateur dans le makefile avec la complétion automatique
+   CLOSED: [2015-06-25 jeu. 18:57]
+   pas trouver de moyen de le faire, just ajouter un "_" devant les noms des règles intermédiaires
+** DONE implement the translation system
    CLOSED: [2015-06-16 mar. 13:22]
-* DONE refactorization(use PEP8)
-  CLOSED: [2015-07-11 sam. 22:08]
-* DONE use scons instead of makefile
-  CLOSED: [2015-07-14 mar. 14:59]
-* TODO refactorization(use the properties system)
-* TODO use pytest instead of phpunit
-* TODO write the french and the english translation
-* TODO refactorize CentreOfInterest xml loading to allow multiples types of schema and have a central file for the ci names
-** TODO create xml schema
-* TODO implement the upload in freemind
+*** DONE faire en sorte que makefile crée les svg demandé
+   	CLOSED: [2015-06-16 mar. 11:30]
+*** DONE vérifier que les svg sont traduit correctement
+   	CLOSED: [2015-06-16 mar. 12:04]
+*** DONE implémenter le système de traduction pour les listes
+   	CLOSED: [2015-06-16 mar. 13:22]
+** DONE refactorization(use PEP8)
+   CLOSED: [2015-07-11 sam. 22:08]
+** DONE use scons instead of makefile
+   CLOSED: [2015-07-14 mar. 14:59]
+** TODO refactorization(use the properties system)
+   CLOCK: [2015-09-21 lun. 10:32]
+   :PROPERTIES:
+   :Effort:   02:00
+   :END:
+** TODO use pytest instead of phpunit
+   :PROPERTIES:
+   :Effort:   02:30
+   :END:
+** TODO write the french and the english translation
+   :PROPERTIES:
+   :Effort:   02:45
+   :END:
+** TODO refactorize CentreOfInterest xml loading to allow multiples types of schema and have a central file for the ci names
+   :PROPERTIES:
+   :Effort:   01:00
+   :END:
+** TODO create xml verification schemas
+   :PROPERTIES:
+   :Effort:   01:00
+   :END:
+** TODO create system to separate official and unofficial CI
+*** TODO change color between official and unofficial CI
+	:PROPERTIES:
+	:Effort:   00:45
+	:END:
+*** TODO allow the creation of graphs with only official CI
+	:PROPERTIES:
+	:Effort:   00:45
+	:END:
+** TODO create a up-to-date graph
+   :PROPERTIES:
+   :Effort:   04:00
+   :END:

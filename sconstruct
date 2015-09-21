@@ -11,6 +11,12 @@ def execute():
     output_dir = './output'
     translations_dir = './translations'
 
+    # program = env.Program('test', 'TestMain.cpp')
+    # Command("test.passed",'test',runUnitTest)
+
+    test = Builder(action='python -m unittest tests/test_* && date > $TARGET')
+    env['BUILDERS']['test'] = test
+
     create_svg = Builder(action='dot -Tsvg $SOURCE > $TARGET',
                          suffix='.svg',
                          src_suffix='.dot')
@@ -59,6 +65,7 @@ def execute():
 
             env.Alias(lang, lang_targets[lang])
 
+        env.test('tests_successful', )
         env.Alias('update_yml', lang_files)
         env.Precious(list(yml_translations_targets.values()))
         env.NoClean(list(yml_translations_targets.values()))

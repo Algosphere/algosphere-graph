@@ -22,7 +22,7 @@ class CentresOfInterestManagerTestCase(unittest.TestCase):
     def test_append(self):
         """ Test the append method """
         self.ci_manager.append(self.ci3)
-        self.assertEqual(self.ci_manager.get_list_of_ci(), [self.ci1, self.ci2, self.ci3])
+        self.assertEqual(self.ci_manager.list_of_ci, [self.ci1, self.ci2, self.ci3])
 
     def test_iter(self):
         """ Test the __iter__ method """
@@ -48,13 +48,13 @@ class CentresOfInterestManagerTestCase(unittest.TestCase):
 
         for (i, centre_of_interest) in zip(range(1, len(list_of_ci)+1), list_of_ci):
             with self.subTest(i=i):
-                self.assertEqual(centre_of_interest.get_url(), "url"+str(i))
+                self.assertEqual(centre_of_interest.url, "url"+str(i))
 
-        self.assertEqual(ci_1.get_children(), [])
-        self.assertEqual(ci_2.get_children(), [])
-        self.assertEqual(ci_3.get_children(), [ci_2])
-        self.assertEqual(ci_4.get_children(), [ci_1, ci_3])
-        self.assertEqual(ci_5.get_children(), [ci_1, ci_2])
+        self.assertEqual(ci_1.children, [])
+        self.assertEqual(ci_2.children, [])
+        self.assertEqual(ci_3.children, [ci_2])
+        self.assertEqual(ci_4.children, [ci_1, ci_3])
+        self.assertEqual(ci_5.children, [ci_1, ci_2])
 
     def test_load_xml_with_bad_xml(self):
         """ Test the load_xml_with_bad_xml method """
@@ -71,9 +71,9 @@ class CentresOfInterestManagerTestCase(unittest.TestCase):
 
     def test_sorted_by_date(self):
         """ Test the sorted_by_date method """
-        self.ci1.set_date("2014-01-02")
-        self.ci2.set_date("2014-01-02")
-        self.ci3.set_date("2014-01-01")
+        self.ci1.date = "2014-01-02"
+        self.ci2.date = "2014-01-02"
+        self.ci3.date = "2014-01-01"
         self.ci_manager = CentresOfInterestManager([self.ci2, self.ci1, self.ci3])
 
         self.assertEqual(self.ci_manager.sorted_by_date(), [self.ci3, self.ci1, self.ci2])

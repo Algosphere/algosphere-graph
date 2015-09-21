@@ -29,6 +29,16 @@ class Translateur:
         self._iso_639_1 = iso_639_1
         self._translations = translations
 
+    @property
+    def iso_639_1(self):
+        """ Get the iso_639 name, ex : fr, en, etc... """
+        return self._iso_639_1
+
+    @property
+    def translations(self):
+        """ Dict of all the translations """
+        return self._translations
+
     def translate(self, sentence):
         """ Translate a particular sentence """
         assert isinstance(sentence, str)

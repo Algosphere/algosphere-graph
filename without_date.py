@@ -23,8 +23,8 @@ def execute():
     ci_manager.load_xml(sys.argv[1])
 
     for centre_of_interest in ci_manager:
-        if centre_of_interest.get_date() == None:
-            print(centre_of_interest.get_name())
+        if centre_of_interest.date == None:
+            print(centre_of_interest.name)
 
 execute()
 

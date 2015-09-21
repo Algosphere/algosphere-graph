@@ -4,6 +4,7 @@ See Translations_manager class
 
 import yaml
 import os
+import copy
 import mylib.checking as checking
 
 from mylib.notifier import Notifier
@@ -56,9 +57,18 @@ class TranslationsManager:
                 stream = yaml.dump(translations, default_flow_style=False, allow_unicode=True)
                 lang_file.write(stream.encode('utf-8'))
 
+    @property
+    def languages(self):
+        """ Get a dict of all languages """
+        languages_name = copy.copy(self._translateurs)
+        del languages_name['up_to_date']
+        for key in languages_name:
+            languages_name[key] = self._translateurs[key].iso_639_1
+        return languages_name
 
     def get_translateur(self, lang):
         """ Get the translateur for the language 'lang'. """
+        self._translateurs['up_to_date'][lang] = False
         return self._translateurs[lang]
 
     def fill_yaml_file(self, lang, lang_file_name, centres_of_interest_manager):
@@ -68,7 +78,7 @@ class TranslationsManager:
         """
         assert isinstance(centres_of_interest_manager, CentresOfInterestManager)
 
-        ci_name_list = [ci.get_name() for ci in centres_of_interest_manager]
+        ci_name_list = [ci.name for ci in centres_of_interest_manager]
         self._create_yaml_file(lang_file_name)
         self.load_yaml_file(lang, lang_file_name)
         self._add_untranslated(ci_name_list, lang)

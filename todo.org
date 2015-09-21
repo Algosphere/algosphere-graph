@@ -45,8 +45,9 @@
    CLOSED: [2015-07-11 sam. 22:08]
 ** DONE use scons instead of makefile
    CLOSED: [2015-07-14 mar. 14:59]
-** TODO refactorization(use the properties system)
-   CLOCK: [2015-09-21 lun. 10:32]
+** DONE refactorization(use the properties system)
+   CLOSED: [2015-09-21 lun. 12:07]
+   CLOCK: [2015-09-21 lun. 10:32]--[2015-09-21 lun. 12:07] =>  1:35
    :PROPERTIES:
    :Effort:   02:00
    :END:

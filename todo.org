@@ -72,7 +72,10 @@
    :Effort:   01:00
    :END:
 ** TODO create system to separate official and unofficial CI
-*** TODO change color between official and unofficial CI
+*** DONE change color between official and unofficial CI
+	 CLOSED: [2015-09-22 mar. 11:28]
+	CLOCK: [2015-09-22 mar. 10:20]--[2015-09-22 mar. 11:28] =>  1:08
+	CLOCK: [2015-09-21 lun. 19:01]--[2015-09-21 lun. 19:15] =>  0:14
 	:PROPERTIES:
 	:Effort:   00:45
 	:END:

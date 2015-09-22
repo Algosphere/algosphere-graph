@@ -2,26 +2,31 @@
 <CI_list>
   <CI>
 	<name>ci_1</name>
+	<official>yes</official>
 	<date>2014-01-01</date>
 	<url>url1</url>
   </CI>
   <CI>
 	<name>ci_2</name>
+	<official>yes</official>
 	<date>2014-02-01</date>
 	<url>url2</url>
   </CI>
   <CI>
 	<name>ci_3</name>
+	<official>yes</official>
 	<date>2014-01-02</date>
 	<url>url3</url>
   </CI>
   <CI>
 	<name>ci_4</name>
+	<official>yes</official>
 	<date>2015-01-01</date>
 	<url>url4</url>
   </CI>
   <CI>
 	<name>ci_5</name>
+	<official>yes</official>
 	<date>2014-03-03</date>
 	<url>url5</url>
   </CI>

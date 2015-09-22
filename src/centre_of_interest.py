@@ -8,6 +8,7 @@ class CentreOfInterest:
         self._name = name
         self._url = url
         self._date = date
+        self._official = True
 
         # ci which are more specific than this ci
         if children == None:
@@ -74,6 +75,18 @@ class CentreOfInterest:
     def name(self, name):
         """ see get_name """
         self._name = name
+
+    @property
+    def official(self):
+        """ True if the CI is integrated to the PFC """
+        return self._official
+
+    @official.setter
+    def official(self, it_is):
+        """ see official """
+        if isinstance(it_is, str):
+            it_is = (it_is == "yes")
+        self._official = it_is
 
     @property
     def url(self):

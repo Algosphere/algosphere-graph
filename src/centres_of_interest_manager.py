@@ -83,7 +83,9 @@ class CentresOfInterestManager:
             name = self._get_element(ci_node, "name")
             url = self._get_element(ci_node, "url")
             date = self._get_element(ci_node, "date")
+            official = self._get_element(ci_node, "official")
             centre_of_interest = CentreOfInterest(name, url, date)
+            centre_of_interest.official = official
             self.append(centre_of_interest)
 
     def load_children(self, ci_graph_file):
@@ -229,10 +231,17 @@ class CentresOfInterestManager:
         string = "digraph CI {\n"
         string += '    node [fontcolor=blue, fontsize=8];\n'
         for centre_of_interest in self:
-            string += '    "' + translate(centre_of_interest.name) +\
-                      '"[URL="'+centre_of_interest.url+ '"];\n'
+            string += '    "' + translate(centre_of_interest.name)
+            if centre_of_interest.official:
+                color = "0.27 0.5 0.9"
+            else:
+                color = "1 0 0.8"
+
+            string += '"[URL="'+centre_of_interest.url + \
+                      '", style=filled, fillcolor="' + color + '"];\n'
+
             for child in centre_of_interest.children:
-                string += '    "' + translate(centre_of_interest.name) +\
+                string += '    "' + translate(centre_of_interest.name) + \
                           '"->"' + translate(child.name) + '";\n'
         string += "}"
 

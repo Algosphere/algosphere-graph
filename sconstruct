@@ -29,6 +29,9 @@ def execute():
     create_dot = Builder(action='./xml_to_graphviz.py $SOURCES $TARGET -v')
     env['BUILDERS']['create_dot'] = create_dot
 
+    create_official_dot = Builder(action='./xml_to_graphviz.py $SOURCES $TARGET -v -oo')
+    env['BUILDERS']['create_official_dot'] = create_official_dot
+
     create_lists_by_name = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -sn')
     env['BUILDERS']['create_lists_by_name'] = create_lists_by_name
 
@@ -42,6 +45,7 @@ def execute():
 
         lang_files = []
         dot_files = {}
+        dot_official_files = {}
         lang_targets = {}
         yml_translations_targets = {}
         for lang in languages:
@@ -55,6 +59,9 @@ def execute():
             dot_files[lang] = env.create_dot(output_dir + '/ci-' + lang + '.dot',
                                              ['ci.xml', 'ci-utility.xml', lang_file])
 
+            dot_official_files[lang] = env.create_official_dot(output_dir + '/ci-official-' + lang + '.dot',
+                                                               ['ci.xml', 'ci-utility.xml', lang_file])
+
             lang_targets[lang] += env.create_lists_by_name(output_dir + '/ci-' + lang + '-by-name.html',
                                                            ['ci.xml', lang_file])
 
@@ -62,6 +69,7 @@ def execute():
                                                            ['ci.xml', lang_file])
 
             lang_targets[lang] += env.create_svg(dot_files[lang])
+            lang_targets[lang] += env.create_svg(dot_official_files[lang])
 
             env.Alias(lang, lang_targets[lang])
 

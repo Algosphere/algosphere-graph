@@ -71,7 +71,8 @@
    :PROPERTIES:
    :Effort:   01:00
    :END:
-** TODO create system to separate official and unofficial CI
+** DONE create system to separate official and unofficial CI
+   CLOSED: [2015-09-22 mar. 16:19]
 *** DONE change color between official and unofficial CI
 	 CLOSED: [2015-09-22 mar. 11:28]
 	CLOCK: [2015-09-22 mar. 10:20]--[2015-09-22 mar. 11:28] =>  1:08
@@ -79,7 +80,11 @@
 	:PROPERTIES:
 	:Effort:   00:45
 	:END:
-*** TODO allow the creation of graphs with only official CI
+*** DONE allow the creation of graphs with only official CI
+	 CLOSED: [2015-09-22 mar. 16:19]
+	CLOCK: [2015-09-22 mar. 16:03]--[2015-09-22 mar. 16:19] =>  0:16
+	CLOCK: [2015-09-22 mar. 15:26]--[2015-09-22 mar. 15:59] =>  0:33
+	CLOCK: [2015-09-22 mar. 12:39]--[2015-09-22 mar. 12:55] =>  0:16
 	:PROPERTIES:
 	:Effort:   00:45
 	:END:

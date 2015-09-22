@@ -22,6 +22,7 @@ class CentresOfInterestManager:
         if notifier != None:
             assert isinstance(notifier, Notifier)
 
+        self._only_official = False
         self._notifier = notifier
         if list_of_ci == None:
             self._list_of_ci = []
@@ -73,11 +74,18 @@ class CentresOfInterestManager:
                     raise IOError('Not valide according to "' + dtd_file_path +
                                   '"\n' + str(dtd.error_log.filter_from_errors()[0]))
 
-    def load_xml(self, xml_file):
+    def delete_unwanted_ci(self):
+        if self._only_official:
+            self._list_of_ci = [ci for ci in self._list_of_ci if ci.official]
+            for ci in self._list_of_ci:
+                ci.children = [child for child in ci.children if child.official]
+
+    def load_xml(self, xml_file, only_official=False):
         """ load all the centres of interest from a xml file """
         self.notify('load xml_file "' + xml_file + '"')
         self.verify_xml(xml_file, self.ci_dtd)
         self._list_of_ci = []
+        self._only_official = only_official
         doc = minidom.parse(xml_file)
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             name = self._get_element(ci_node, "name")
@@ -92,14 +100,17 @@ class CentresOfInterestManager:
         """ Make the link between the centres of interest and their children """
         self.verify_xml(ci_graph_file, self.ci_graph_dtd)
         doc = minidom.parse(ci_graph_file)
+
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             ci_name = ci_node.getElementsByTagName("name")[0].firstChild.nodeValue
             centre_of_interest = self.find(ci_name)
             if centre_of_interest == None:
                 raise ValueError('"' + ci_name + '" found in "'+
-                                 ci_graph_file + '" doesn’t exist in ci.xml')
+                                 ci_graph_file + '" doesn\'t exist in ci.xml')
             children_node = ci_node.getElementsByTagName("children")[0]
-            for child in children_node.getElementsByTagName("child"):
+            child_nodes = children_node.getElementsByTagName("child")
+
+            for child in child_nodes:
                 if child.firstChild == None:
                     raise ValueError("void child balise in '" + ci_name + "'")
                 else:
@@ -170,6 +181,7 @@ class CentresOfInterestManager:
         :return: return a string corresponding of the html page
         """
 
+        self.delete_unwanted_ci()
         if translate == None:
             translate = lambda x: x
 
@@ -223,8 +235,9 @@ class CentresOfInterestManager:
         :type translate: function
         :return: return a string corresponding of the dot file
         """
-
         self.load_children(ci_graph_file)
+        self.delete_unwanted_ci()
+
         if translate == None:
             translate = lambda x: x
 

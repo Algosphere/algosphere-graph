@@ -71,7 +71,7 @@ def execute():
         order = "by_name"
 
     ci_manager = CentresOfInterestManager([], notifier)
-    ci_manager.load_xml(args.data_file)
+    ci_manager.load_xml(args.data_file, True)
 
     translations_manager = TranslationsManager(notifier)
 

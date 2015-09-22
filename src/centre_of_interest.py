@@ -37,6 +37,11 @@ class CentreOfInterest:
         """ get all the child CI of this CI """
         return self._children
 
+    @children.setter
+    def children(self, children):
+        """ See chidren """
+        self._children = children
+
     def add_translation(self, lang, translation):
         """ add a translation of the name of the CI in the language 'lang'"""
         assert isinstance(lang, str)

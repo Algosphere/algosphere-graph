@@ -70,7 +70,8 @@ class CentresOfInterestManager:
                 dtd = etree.DTD(dtd_file)
                 root = etree.parse(xml_file)
                 if not dtd.validate(root):
-                    raise IOError('"' + xml_file_path + '" is not valide according to "' + dtd_file_path + '"')
+                    raise IOError('Not valide according to "' + dtd_file_path +
+                                  '"\n' + str(dtd.error_log.filter_from_errors()[0]))
 
     def load_xml(self, xml_file):
         """ load all the centres of interest from a xml file """

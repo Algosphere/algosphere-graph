@@ -38,6 +38,11 @@ def execute():
     create_lists_by_date = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -sd')
     env['BUILDERS']['create_lists_by_date'] = create_lists_by_date
 
+    create_official_lists_by_name = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -oo -sn')
+    env['BUILDERS']['create_official_lists_by_name'] = create_official_lists_by_name
+
+    create_official_lists_by_date = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -oo -sd')
+    env['BUILDERS']['create_official_lists_by_date'] = create_official_lists_by_date
 
     with open('languages.yml', 'rb') as lang_file:
         languages = yaml.safe_load(lang_file)
@@ -66,6 +71,11 @@ def execute():
                                                            ['ci.xml', lang_file])
 
             lang_targets[lang] += env.create_lists_by_date(output_dir + '/ci-' + lang + '-by-date.html',
+                                                           ['ci.xml', lang_file])
+            lang_targets[lang] += env.create_official_lists_by_name(output_dir + '/ci-official-' + lang + '-by-name.html',
+                                                           ['ci.xml', lang_file])
+
+            lang_targets[lang] += env.create_official_lists_by_date(output_dir + '/ci-official-' + lang + '-by-date.html',
                                                            ['ci.xml', lang_file])
 
             lang_targets[lang] += env.create_svg(dot_files[lang])

@@ -185,12 +185,7 @@ class CentresOfInterestManager:
         if translate == None:
             translate = lambda x: x
 
-        string = "<html>\n"
-        string += "  <head>\n"
-        string += '    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
-        string += "  </head>\n"
-        string += "  <body>\n"
-        string += "    <ul>\n"
+        string = "    <ul>\n"
 
         if order == "by_name":
             sorted_list_of_ci = self.sorted_by_name(translate)
@@ -221,8 +216,6 @@ class CentresOfInterestManager:
                       translate(centre_of_interest.name) + '</a></li>\n'
 
         string += "    </ul>\n"
-        string += "  </body>\n"
-        string += "</html>\n"
 
         return string
 

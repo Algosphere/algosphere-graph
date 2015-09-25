@@ -32,12 +32,6 @@
 	</children>
   </CI>
   <CI>
-	<name>Annuaire des forces contribuant à l'allègement de la souffrance - Chantier</name>
-	<children>
-	  <child>Collaboration Ukratio</child>
-	</children>
-  </CI>
-  <CI>
 	<name>Éducation à l’Autonomie</name>
 	<children>
 	  <child>Avortement</child>
@@ -247,7 +241,7 @@
 	</children>
   </CI>
   <CI>
-	<name>Futur</name>
+	<name>Future</name>
 	<children>
 	  <child>court terme &lt; 6 mois</child>
 	  <child>Moyen terme : 6 mois &lt; 3 ans</child>
@@ -302,6 +296,7 @@
 	  <child>Orientation Action Concrète</child>
 	  <child>Orientation Connaissance</child>
 	  <child>Le socle : une alliance</child>
+	  <child>Future</child>
 	</children>
   </CI>
   <CI>
@@ -318,6 +313,7 @@
 	  <child>Institutionnalisation d'une nouvelle discipline sur la souffrance</child>
 	  <child>Évaluation éthique des acteurs</child>
 	  <child>Animaux non-humains</child>
+	  <child>Nutrition</child>
 	</children>
   </CI>
   <CI>
@@ -394,6 +390,7 @@
 	<children>
 	  <child>Soutien administratif de l'Alliance</child>
 	  <child>Financement de l'allègement de la souffrance</child>
+	  <child>Annuaire des invités inscrits et des alliés</child>
 	</children>
   </CI>
   <CI>
@@ -431,7 +428,6 @@
   <CI>
 	<name>Soutenir les organisations contribuant à l'allègement de la souffrance</name>
 	<children>
-	  <child>Annuaire des forces contribuant à l'allègement de la souffrance - Chantier</child>
 	  <child>Cross-fertilization</child>
 	</children>
   </CI>
@@ -470,6 +466,19 @@
 	<children>
 	  <child>Meetings du Conseil Communication 2014</child>
 	  <child>Meetings du Conseil Communication 2015</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Chantiers</name>
+	<children>
+	  <child>Chantier : Annuaire des forces contribuant à l'allègement de la souffrance</child>
+	  <child>Chantier : Annuaire des alliés, invités</child>
+	  <child>Chantier : Parcours d'accueil</child>
+	  <child>Chantier : Parole officielle de l’Alliance</child>
+	  <child>Chantier : Site Internet de l'Alliance</child>
+	  <child>Chantier : Plateforme Collaborative de l’Alliance</child>
+	  <child>Chantier : AlgoNews</child>
+	  <child>Chantier : processus de décision de l’Alliance</child>
 	</children>
   </CI>
 </CI_list>

@@ -31,7 +31,7 @@
 	<url>https://docs.google.com/document/d/1Q_aKc-vsjkn15ohk9lpQwFvLZyCcKU8beC2K0NWehBw</url>
   </CI>
   <CI>
-	<name>Annuaire des forces contribuant à l'allègement de la souffrance - Chantier</name>
+	<name>Chantier : Annuaire des forces contribuant à l'allègement de la souffrance</name>
 	<official>yes</official>
 	<date>2013-05-01</date>
 	<url>https://docs.google.com/document/d/12U8PGEhEHCgxETIWNukHEPZHq_eLOWxQ-zS2oLE_1rw</url>
@@ -493,7 +493,7 @@
 	<url>https://docs.google.com/spreadsheet/ccc?key=0AsCCSwW5inUkdEh1TUpfNjgxMDJvUmFzRUpGVG9tcFE</url>
   </CI>
   <CI>
-	<name>Annuaire des alliés, invités  Chantier</name>
+	<name>Chantier : Annuaire des alliés, invités</name>
 	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/document/d/1UfTporAxLBt2E_i8ihhHhKVdNn4X2_GX73Jqcr-JgwU</url>
@@ -571,7 +571,13 @@
 	<url>https://docs.google.com/document/d/19NhujUQfkx_omJ-1LN9YAVK4MJN8db3yBmpvyR1oHkk</url>
   </CI>
   <CI>
-	<name>Futur</name>
+	<name>Future</name>
+	<official>yes</official>
+	<date>not_yet</date>
+	<url></url>
+  </CI>
+  <CI>
+	<name>Chantiers</name>
 	<official>no</official>
 	<date>not_yet</date>
 	<url></url>

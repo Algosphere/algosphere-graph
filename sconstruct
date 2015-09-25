@@ -26,22 +26,22 @@ def execute():
     update_yml = Builder(action='./fill_yaml_file.py $SOURCE $TARGET -v')
     env['BUILDERS']['update_yml'] = update_yml
 
-    create_dot = Builder(action='./xml_to_graphviz.py $SOURCES $TARGET -v')
+    create_dot = Builder(action='./xml_to_graphviz.py $SOURCES $TARGET -v -l')
     env['BUILDERS']['create_dot'] = create_dot
 
-    create_official_dot = Builder(action='./xml_to_graphviz.py $SOURCES $TARGET -v -oo')
+    create_official_dot = Builder(action='./xml_to_graphviz.py $SOURCES $TARGET -v -oo -l')
     env['BUILDERS']['create_official_dot'] = create_official_dot
 
-    create_lists_by_name = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -sn')
+    create_lists_by_name = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -sn -l')
     env['BUILDERS']['create_lists_by_name'] = create_lists_by_name
 
-    create_lists_by_date = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -sd')
+    create_lists_by_date = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -sd -l')
     env['BUILDERS']['create_lists_by_date'] = create_lists_by_date
 
-    create_official_lists_by_name = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -oo -sn')
+    create_official_lists_by_name = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -oo -sn -l')
     env['BUILDERS']['create_official_lists_by_name'] = create_official_lists_by_name
 
-    create_official_lists_by_date = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -oo -sd')
+    create_official_lists_by_date = Builder(action='./xml_to_html_list.py $SOURCES $TARGET -v -oo -sd -l')
     env['BUILDERS']['create_official_lists_by_date'] = create_official_lists_by_date
 
     with open('languages.yml', 'rb') as lang_file:

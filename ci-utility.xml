@@ -34,7 +34,6 @@
   <CI>
 	<name>Éducation à l’Autonomie</name>
 	<children>
-	  <child>Avortement</child>
 	  <child>Complémentaires santé</child>
 	  <child>Développer les connaissances de chacun</child>
 	  <child>Droits humains</child>
@@ -95,6 +94,7 @@
   <CI>
 	<name>Cross-fertilization</name>
 	<children>
+	  <child>Collaboration Ukratio</child>
 	</children>
   </CI>
   <CI>
@@ -123,6 +123,7 @@
   <CI>
 	<name>Droit de disposer de son corps</name>
 	<children>
+	  <child>Mutilation sexuelle</child>
 	</children>
   </CI>
   <CI>
@@ -170,11 +171,6 @@
   <CI>
 	<name>Féminisme</name>
 	<children>
-	  <child>Avortement</child>
-	  <child>Droits humains</child>
-	  <child>Mutilation sexuelle féminine (excision...)</child>
-	  <child>Mutilation sexuelle masculine (circoncision...)</child>
-	  <child>Mutilation sexuelle transgenre</child>
 	  <child>Vers des langues vivantes non-sexistes</child>
 	</children>
   </CI>
@@ -314,6 +310,18 @@
 	  <child>Évaluation éthique des acteurs</child>
 	  <child>Animaux non-humains</child>
 	  <child>Nutrition</child>
+	  <child>Processus de décision</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Prospective > 3 ans</name>
+	<children>
+	</children>
+  </CI>
+  <CI>
+	<name>Règles de fonctionnement</name>
+	<children>
+
 	</children>
   </CI>
   <CI>
@@ -357,6 +365,9 @@
 	<name>Plateforme Collaborative de l'Alliance</name>
 	<children>
 	  <child>Centre d'intérêt - modèle</child>
+	  <child>Chantiers</child>
+	  <child>List of Centers of Interest</child>
+	  <child>Guide utilisateur de Google (Drive, Doc...)</child>
 	</children>
   </CI>
   <CI>
@@ -367,6 +378,7 @@
   <CI>
 	<name>Processus de décision</name>
 	<children>
+	  <child>Conditions de possibilité d’une décision par consentement</child>
 	</children>
   </CI>
   <CI>
@@ -377,7 +389,7 @@
   <CI>
 	<name>Règles de fonctionnement</name>
 	<children>
-	  <child>Processus de décision</child>
+	  <child>Operating rules</child>
 	</children>
   </CI>
   <CI>
@@ -391,6 +403,7 @@
 	  <child>Soutien administratif de l'Alliance</child>
 	  <child>Financement de l'allègement de la souffrance</child>
 	  <child>Annuaire des invités inscrits et des alliés</child>
+	  <child>AlgoConsulting</child>
 	</children>
   </CI>
   <CI>
@@ -429,6 +442,7 @@
 	<name>Soutenir les organisations contribuant à l'allègement de la souffrance</name>
 	<children>
 	  <child>Cross-fertilization</child>
+	  <child>List of organizations contributing to the alleviation of suffering</child>
 	</children>
   </CI>
   <CI>
@@ -444,6 +458,7 @@
 	  <child>Webmaster Team</child>
 	  <child>Archives Algosphere Alliance</child>
 	  <child>Agora</child>
+	  <child>Translation Process</child>
 	</children>
   </CI>
   <CI>
@@ -481,4 +496,20 @@
 	  <child>Chantier : processus de décision de l’Alliance</child>
 	</children>
   </CI>
+  <CI>
+	<name>Chantier : Site Internet de l'Alliance</name>
+	<children>
+	  <child>Chantier: Site Internet (Technologies et fonctionnalités)</child>
+	  <child>Chantier: Site Internet (design et ergonomie)</child>
+	</children>
+  </CI>
+  <CI>
+	<name>Mutilation sexuelle</name>
+	<children>
+  	  <child>Mutilation sexuelle féminine (excision...)</child>
+	  <child>Mutilation sexuelle masculine (circoncision...)</child>
+	  <child>Mutilation sexuelle transgenre</child>
+	</children>
+  </CI>
+
 </CI_list>

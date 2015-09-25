@@ -541,6 +541,18 @@
 	<url>https://docs.google.com/document/d/1nXhrGaih0b8pFP8Ucf730qY53uq6WcF2PzS4Bp4ynPM</url>
   </CI>
   <CI>
+	<name>Chantier: Site Internet (Technologies et fonctionnalités)</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/18sHr7hc08w-21zuW3UZl3dC4gQ6O2eeXMSaEyFWaimE</url>
+  </CI>
+  <CI>
+	<name>Chantier: Site Internet (design et ergonomie)</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1cTfl-DrXogXtxtC8FoWWEZgCeYlWVxjCsbhqkiJl13o</url>
+  </CI>
+  <CI>
 	<name>Chantier : Plateforme Collaborative de l’Alliance</name>
 	<official>no</official>
 	<date>not_yet</date>
@@ -578,8 +590,26 @@
   </CI>
   <CI>
 	<name>Chantiers</name>
-	<official>no</official>
+	<official>yes</official>
 	<date>not_yet</date>
 	<url></url>
+  </CI>
+  <CI>
+	<name>Mutilation sexuelle</name>
+	<official>yes</official>
+	<date>not_yet</date>
+	<url></url>
+  </CI>
+  <CI>
+	<name>List of organizations contributing to the alleviation of suffering</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1-Vp1i4OJ6O_-_6tNmG-U7kcUbOWbNRfFFE8PjFf4tQU</url>
+  </CI>
+  <CI>
+	<name>Operating rules</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1jheoCuQOYDF0jJqGBJc6RHzSyelzMgkF0ulPMMzGHzY</url>
   </CI>
 </CI_list>

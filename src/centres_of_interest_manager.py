@@ -90,9 +90,9 @@ class CentresOfInterestManager:
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             name = self._get_element(ci_node, "name")
             if with_link:
-                url = self._get_element(ci_node, "url")
+                url = self._get_element(ci_node, "url") #url == None, if the <url> balise is empty
             else:
-                url = None
+                url = ''
             date = self._get_element(ci_node, "date")
             official = self._get_element(ci_node, "official")
             centre_of_interest = CentreOfInterest(name, url, date)
@@ -246,7 +246,10 @@ class CentresOfInterestManager:
             else:
                 color = "1 0 0.8"
 
-            if centre_of_interest.url != None:
+            if centre_of_interest.url == None:
+                color = "0.5 0.5 0.9"
+
+            if (centre_of_interest.url != None) and (centre_of_interest.url != ''):
                 string += '"[URL="'+centre_of_interest.url + \
                           '", style=filled, fillcolor="' + color + '"];\n'
             else:

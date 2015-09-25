@@ -37,7 +37,7 @@
     <?php
 	   foreach ($langs as $lang)
 	   {
-           echo '<img id="' . $lang . 'utility" src="output/ci-official-' . $lang . '.svg" alt="' . $lang . 'graph">';
+           echo '<object id="' . $lang . 'utility" data="output/ci-official-' . $lang . '.svg" type="image/svg+xml"></object>';
 		   $link = 'output/ci-official-' . $lang . '-by-date.html';
            echo '<div id="' . $lang . 'by-date">';
            include($link);
@@ -47,7 +47,7 @@
            include($link);
            echo '</div>';
 
-           echo '<img id="' . $lang . 'utility_objects" src="output/ci-' . $lang . '.svg" alt="' . $lang . 'graph">';
+           echo '<object id="' . $lang . 'utility_objects" data="output/ci-' . $lang . '.svg" type="image/svg+xml"></object>';
 		   $link = 'output/ci-' . $lang . '-by-date.html';
            echo '<div id="' . $lang . 'by-date_objects">';
            include($link);

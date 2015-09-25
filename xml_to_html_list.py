@@ -56,6 +56,7 @@ def execute():
     parser.add_argument('-v', '--verbose', help='explain what is being done', action="store_true")
 
     parser.add_argument('-oo', '--only_official', help='load only official CI', action="store_true")
+    parser.add_argument('-l', '--with_link', help='add internet link to the list', action="store_true")
 
     args = parser.parse_args()
 
@@ -73,7 +74,7 @@ def execute():
         order = "by_name"
 
     ci_manager = CentresOfInterestManager([], notifier)
-    ci_manager.load_xml(args.data_file, args.only_official)
+    ci_manager.load_xml(args.data_file, args.only_official, args.with_link)
 
     translations_manager = TranslationsManager(notifier)
 

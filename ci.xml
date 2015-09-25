@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <CI_list>
   <CI>
-	<name>Agenda à court terme &lt; 6 mois</name>
-	<official>no</official>
+	<name>court terme &lt; 6 mois</name>
+	<official>yes</official>
 	<date>2013-11-24</date>
 	<url>https://docs.google.com/document/d/1Xa0mZNYU4kKdiZEBlXkNKMF4pqa6lVPjvx5FXVglMFg</url>
   </CI>
@@ -14,13 +14,13 @@
   </CI>
   <CI>
 	<name>Algopublishing</name>
-	<official>no</official>
+	<official>yes</official>
 	<date>2013-12-29</date>
 	<url>https://docs.google.com/document/d/1Wfz1gwjJ_C9LTenjBq63kYDpuKq8NygaZT66kywroeU</url>
   </CI>
   <CI>
 	<name>Allègement concret immédiat</name>
-	<official>no</official>
+	<official>yes</official>
 	<date>2013-10-27</date>
 	<url>https://docs.google.com/document/d/1s8TznCtqqP71DBPD7qbeo9J-T6yKkuUyoGFtoSAoXoM</url>
   </CI>
@@ -37,7 +37,7 @@
 	<url>https://docs.google.com/document/d/12U8PGEhEHCgxETIWNukHEPZHq_eLOWxQ-zS2oLE_1rw</url>
   </CI>
   <CI>
-	<name>Autonomie personnelle</name>
+	<name>Éducation à l’Autonomie</name>
 	<official>yes</official>
 	<date>2013-05-01</date>
 	<url>https://docs.google.com/document/d/17e2xf-z6SYP99qB91vz-R-_FosHyjRBs-qSR0_wQB2c</url>
@@ -235,7 +235,7 @@
 	<url>https://docs.google.com/document/d/1Rg5BpVJ-iK6r9Fem8O43auCGf72yyvpCWRtYMfQQhN0</url>
   </CI>
   <CI>
-	<name>Méditation</name>
+	<name>Mind Training - Meditation</name>
 	<official>yes</official>
 	<date>2014-05-06</date>
 	<url>https://docs.google.com/document/d/15Gx_peGp0lMSvM8PDb5SCfTJ-Fw_ciIp_uEOubcxhwM</url>
@@ -253,19 +253,19 @@
 	<url>https://docs.google.com/document/d/1SBnWhStBR5KKsfYjfmFMH0KOJVvi2sQwOnRWDybzLsA</url>
   </CI>
   <CI>
-	<name>Mutilation génitale féminine (excision...)</name>
+	<name>Mutilation sexuelle féminine (excision...)</name>
 	<official>yes</official>
 	<date>2014-07-15</date>
 	<url>https://docs.google.com/document/d/1rcXNNBHUP2zDYRIxLuyXvVIUfSzCPtZbsx3HC7ulcpc</url>
   </CI>
   <CI>
-	<name>Mutilation génitale masculine (circoncision...)</name>
+	<name>Mutilation sexuelle masculine (circoncision...)</name>
 	<official>yes</official>
 	<date>2014-07-15</date>
 	<url>https://docs.google.com/document/d/1g1BmMTuAXFzIGf3uY0jG_WeAcJBCFuSRF-0ILmNAcVU</url>
   </CI>
   <CI>
-	<name>Mutilation génitale transgenre</name>
+	<name>Mutilation sexuelle transgenre</name>
 	<official>yes</official>
 	<date>2014-07-15</date>
 	<url>https://docs.google.com/document/d/1Tsx-aObeTrjQ49UipoO3l-EU6ppzLYTAz9VnWyi4qPY</url>
@@ -446,56 +446,134 @@
   </CI>
   <CI>
 	<name>Meetings du Conseil Communication 2014</name>
-	<official>yes</official>
+	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/document/d/1MKsaa261kSfJTsgwEd6mLgIhCobKyzDq-2lu03FKcdk</url>
   </CI>
   <CI>
+	<name>Meetings du Conseil Communication 2015</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1wAA4c-8h_TYCzzuXDgRGOmAyFjMYV64A3IkN018UN80</url>
+  </CI>
+  <CI>
 	<name>Archives Algosphere Alliance</name>
-	<official>yes</official>
+	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/document/d/1O8yNJM5IzMG873rXIqh2SNkTZLlRJUkCX5_3txBepF4</url>
   </CI>
   <CI>
 	<name>Agora</name>
-	<official>yes</official>
-	<date>not_yet</date>
-	<url>https://docs.google.com/document/d/17zLxF1WO3YTx4l8Qy2aw2lHm6Dn3q0B2wfofp8EfPqY</url>
-  </CI>
-  <CI>
-	<name>Agora</name>
-	<official>yes</official>
+	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/document/d/17zLxF1WO3YTx4l8Qy2aw2lHm6Dn3q0B2wfofp8EfPqY</url>
   </CI>
   <CI>
 	<name>Centre d'intérêt - modèle</name>
-	<official>yes</official>
+	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/document/d/1vofY4Dnsg_2lAkrAv0G-CeNy2K-LGv89ohFJab_rFh8</url>
   </CI>
   <CI>
 	<name>Questions-suggestions-critiques</name>
-	<official>yes</official>
+	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/document/d/1MU84sexm0AmS-hu3CTSv0SLrOxu2cFD1REse6ub4YsE</url>
   </CI>
   <CI>
 	<name>AlgoNews</name>
-	<official>yes</official>
+	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/document/d/1DBa1pEdACvb7VH4y945ULfaAWslGkpCQDZjINOb8l6I</url>
   </CI>
   <CI>
 	<name>Annuaire des invités inscrits et des alliés</name>
-	<official>yes</official>
+	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/spreadsheet/ccc?key=0AsCCSwW5inUkdEh1TUpfNjgxMDJvUmFzRUpGVG9tcFE</url>
   </CI>
   <CI>
 	<name>Annuaire des alliés, invités  Chantier</name>
-	<official>yes</official>
+	<official>no</official>
 	<date>not_yet</date>
 	<url>https://docs.google.com/document/d/1UfTporAxLBt2E_i8ihhHhKVdNn4X2_GX73Jqcr-JgwU</url>
+  </CI>
+  <CI>
+	<name>Nutrition</name>
+	<official>yes</official>
+	<date>2015-04-16</date>
+	<url>https://docs.google.com/document/d/1NJnyAwtrf5xJrDo6T7VG43WiM3oP9So8nuP4ntlZPGo</url>
+  </CI>
+  <CI>
+	<name>Translation Process</name>
+	<official>yes</official>
+	<date>2015-02-16</date>
+	<url>https://docs.google.com/document/d/1L-IQdW3gSIUTntpb_TC7aC9nEMS1OOUNBvID5CvH23Y</url>
+  </CI>
+  <CI>
+	<name>AlgoConsulting</name>
+	<official>yes</official>
+	<date>2015-02-16</date>
+	<url>https://docs.google.com/document/d/166I2puwCZl_GUhohq0JVZWJKABT9fbcIr2nwDRTIam4</url>
+  </CI>
+  <CI>
+	<name>List of Centers of Interest</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1H-PEpTv5bEqnslp43YIyjnjlOhvM819AQ8GH0jJIkHI</url>
+  </CI>
+  <CI>
+	<name>Chantier : Parcours d'accueil</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/10qIUQzdwPdIA5ZS5JT_GQcQW5INhCGNhXLTREiJyz90</url>
+  </CI>
+  <CI>
+	<name>Chantier : Parole officielle de l’Alliance</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1uXsPZ8OYdwaAvdAI9LmkRUpFgOB_9RjUej6GFaWMQwc</url>
+  </CI>
+  <CI>
+	<name>Chantier : Site Internet de l'Alliance</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1nXhrGaih0b8pFP8Ucf730qY53uq6WcF2PzS4Bp4ynPM</url>
+  </CI>
+  <CI>
+	<name>Chantier : Plateforme Collaborative de l’Alliance</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1FLCqcu4KstAm4ghWLLyVe7YVlK_pOWTnDGwa8trBy1E</url>
+  </CI>
+  <CI>
+	<name>Chantier : AlgoNews</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/11kUtiz18jXf65fJNxLWvh_SPQK5nkU8DNM5lhSxoMlU</url>
+  </CI>
+  <CI>
+	<name>Chantier : processus de décision de l’Alliance</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1NsiS5Ux0I3YJOkym1dU8VY540yGxEvLRK-O1_9vd278</url>
+  </CI>
+  <CI>
+	<name>Guide utilisateur de Google (Drive, Doc...)</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/1_scWE9LAgaUlZPHN6whyI70WGfvyHR3K_nG6nXKeBlI</url>
+  </CI>
+  <CI>
+	<name>Conditions de possibilité d’une décision par consentement</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url>https://docs.google.com/document/d/19NhujUQfkx_omJ-1LN9YAVK4MJN8db3yBmpvyR1oHkk</url>
+  </CI>
+  <CI>
+	<name>Futur</name>
+	<official>no</official>
+	<date>not_yet</date>
+	<url></url>
   </CI>
 </CI_list>

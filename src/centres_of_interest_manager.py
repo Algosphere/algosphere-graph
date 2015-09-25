@@ -80,7 +80,7 @@ class CentresOfInterestManager:
             for ci in self._list_of_ci:
                 ci.children = [child for child in ci.children if child.official]
 
-    def load_xml(self, xml_file, only_official=False):
+    def load_xml(self, xml_file, only_official=False, with_link=True):
         """ load all the centres of interest from a xml file """
         self.notify('load xml_file "' + xml_file + '"')
         self.verify_xml(xml_file, self.ci_dtd)
@@ -89,7 +89,10 @@ class CentresOfInterestManager:
         doc = minidom.parse(xml_file)
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             name = self._get_element(ci_node, "name")
-            url = self._get_element(ci_node, "url")
+            if with_link:
+                url = self._get_element(ci_node, "url")
+            else:
+                url = None
             date = self._get_element(ci_node, "date")
             official = self._get_element(ci_node, "official")
             centre_of_interest = CentreOfInterest(name, url, date)
@@ -211,9 +214,9 @@ class CentresOfInterestManager:
                     str_date = "unknown"
 
                 string += '      <h2>'+str_date+'</h2>'
-
-            string += '      <li><a href="' + centre_of_interest.url + '">' + \
-                      translate(centre_of_interest.name) + '</a></li>\n'
+            if centre_of_interest.url != None:
+                string += '      <li><a href="' + centre_of_interest.url + '">' + \
+                          translate(centre_of_interest.name) + '</a></li>\n'
 
         string += "    </ul>\n"
 
@@ -243,8 +246,11 @@ class CentresOfInterestManager:
             else:
                 color = "1 0 0.8"
 
-            string += '"[URL="'+centre_of_interest.url + \
-                      '", style=filled, fillcolor="' + color + '"];\n'
+            if centre_of_interest.url != None:
+                string += '"[URL="'+centre_of_interest.url + \
+                          '", style=filled, fillcolor="' + color + '"];\n'
+            else:
+                string += '"[style=filled, fillcolor="' + color + '"];\n'
 
             for child in centre_of_interest.children:
                 string += '    "' + translate(centre_of_interest.name) + \

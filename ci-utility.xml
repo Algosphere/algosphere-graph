@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <CI_list>
   <CI>
-	<name>Agenda à court terme &lt; 6 mois</name>
+	<name>court terme &lt; 6 mois</name>
 	<children>
 	</children>
   </CI>
@@ -19,9 +19,9 @@
   <CI>
 	<name>Allègement concret immédiat</name>
 	<children>
-	  <child>Autonomie personnelle</child>
+	  <child>Éducation à l’Autonomie</child>
 	  <child>Fin de vie sans souffrance évitable</child>
-	  <child>Méditation</child>
+	  <child>Mind Training - Meditation</child>
 	  <child>Souffrance vécue</child>
 	</children>
   </CI>
@@ -38,13 +38,13 @@
 	</children>
   </CI>
   <CI>
-	<name>Autonomie personnelle</name>
+	<name>Éducation à l’Autonomie</name>
 	<children>
 	  <child>Avortement</child>
 	  <child>Complémentaires santé</child>
 	  <child>Développer les connaissances de chacun</child>
 	  <child>Droits humains</child>
-	  <child>Méditation</child>
+	  <child>Mind Training - Meditation</child>
 	  <child>Réseaux de proximité</child>
 	  <child>Revenu Universel</child>
 	</children>
@@ -57,7 +57,7 @@
   <CI>
 	<name>Bouddhisme</name>
 	<children>
-	  <child>Méditation</child>
+	  <child>Mind Training - Meditation</child>
 	</children>
   </CI>
   <CI>
@@ -83,6 +83,8 @@
 	  <child>Diversité linguistique en démocratie directe mondiale</child>
 	  <child>Parcours d'accueil</child>
 	  <child>Algopublishing</child>
+	  <child>Questions-suggestions-critiques</child>
+	  <child>AlgoNews</child>
 	</children>
   </CI>
   <CI>
@@ -176,9 +178,9 @@
 	<children>
 	  <child>Avortement</child>
 	  <child>Droits humains</child>
-	  <child>Mutilation génitale féminine (excision...)</child>
-	  <child>Mutilation génitale masculine (circoncision...)</child>
-	  <child>Mutilation génitale transgenre</child>
+	  <child>Mutilation sexuelle féminine (excision...)</child>
+	  <child>Mutilation sexuelle masculine (circoncision...)</child>
+	  <child>Mutilation sexuelle transgenre</child>
 	  <child>Vers des langues vivantes non-sexistes</child>
 	</children>
   </CI>
@@ -236,9 +238,6 @@
   <CI>
 	<name>Le socle : une alliance</name>
 	<children>
-	  <child>Agenda à court terme &lt; 6 mois</child>
-	  <child>Moyen terme : 6 mois &lt; 3 ans</child>
-	  <child>Prospective > 3 ans</child>
 	  <child>Community Management</child>
 	  <child>Identité de l'alliance</child>
 	  <child>Domaines d'intervention et types d'action</child>
@@ -248,13 +247,21 @@
 	</children>
   </CI>
   <CI>
+	<name>Futur</name>
+	<children>
+	  <child>court terme &lt; 6 mois</child>
+	  <child>Moyen terme : 6 mois &lt; 3 ans</child>
+	  <child>Prospective > 3 ans</child>
+	</children>
+  </CI>
+  <CI>
 	<name>Manuel d'algonomie</name>
 	<children>
 	  <child>Encyclopédie des problèmes mondiaux et du potentiel humain</child>
 	</children>
   </CI>
   <CI>
-	<name>Méditation</name>
+	<name>Mind Training - Meditation</name>
 	<children>
 	</children>
   </CI>
@@ -269,17 +276,17 @@
 	</children>
   </CI>
   <CI>
-	<name>Mutilation génitale féminine (excision...)</name>
+	<name>Mutilation sexuelle féminine (excision...)</name>
 	<children>
 	</children>
   </CI>
   <CI>
-	<name>Mutilation génitale masculine (circoncision...)</name>
+	<name>Mutilation sexuelle masculine (circoncision...)</name>
 	<children>
 	</children>
   </CI>
   <CI>
-	<name>Mutilation génitale transgenre</name>
+	<name>Mutilation sexuelle transgenre</name>
 	<children>
 	</children>
   </CI>
@@ -353,6 +360,7 @@
   <CI>
 	<name>Plateforme Collaborative de l'Alliance</name>
 	<children>
+	  <child>Centre d'intérêt - modèle</child>
 	</children>
   </CI>
   <CI>
@@ -439,6 +447,7 @@
 	  <child>Site internet public de l'alliance : forme et contenu</child>
 	  <child>Webmaster Team</child>
 	  <child>Archives Algosphere Alliance</child>
+	  <child>Agora</child>
 	</children>
   </CI>
   <CI>
@@ -460,51 +469,7 @@
 	<name>Webmaster Team</name>
 	<children>
 	  <child>Meetings du Conseil Communication 2014</child>
-	</children>
-  </CI>
-  <CI>
-	<name>Meetings du Conseil Communication 2014</name>
-	<children>
-	</children>
-  </CI>
-  <CI>
-	<name>Archives Algosphere Alliance</name>
-	<children>
-	</children>
-  </CI>
-  <CI>
-	<name>Agora</name>
-	<children>
-	</children>
-  </CI>
-  <CI>
-	<name>Agora</name>
-	<children>
-	</children>
-  </CI>
-  <CI>
-	<name>Centre d'intérêt - modèle</name>
-	<children>
-	</children>
-  </CI>
-  <CI>
-	<name>Questions-suggestions-critiques</name>
-	<children>
-	</children>
-  </CI>
-  <CI>
-	<name>AlgoNews</name>
-	<children>
-	</children>
-  </CI>
-  <CI>
-	<name>Annuaire des invités inscrits et des alliés</name>
-	<children>
-	</children>
-  </CI>
-  <CI>
-	<name>Annuaire des alliés, invités  Chantier</name>
-	<children>
+	  <child>Meetings du Conseil Communication 2015</child>
 	</children>
   </CI>
 </CI_list>

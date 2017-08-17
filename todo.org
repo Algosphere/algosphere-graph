@@ -88,6 +88,9 @@
 	:PROPERTIES:
 	:Effort:   00:45
 	:END:
+** TODO disconnect design from core
+** TODO get ci.xml from algosphere database
+** TODO find a way to collapse sub-graphe
 ** TODO create a up-to-date graph
    :PROPERTIES:
    :Effort:   04:00

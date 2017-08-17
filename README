@@ -24,6 +24,9 @@ You need :
 - graphviz 2.38 or highter (can certainly work with a lower version)
 - scons 2.3.5 or highter (can certainly work with a lower version)
 - my python_libs (git@github.com:dionisos2/python_libs.git)
+Optional :
+- pytest 3.2 or highter (can certainly work with a lower version)
+- pytest-cov 2.5 or highter (can certainly work with a lower version)
 ================================
 	Authors
 ================================
@@ -110,6 +113,11 @@ The child CI should be seen entirely as a specific way, and not partially, if pa
 Add the parents :
 It exactly the symmetry of the add of children.
 You should look through the list of CI, and if the new CI could be see as a specific way to go in the direction of the goal of this CI, you should add the new CI as a child of this CI.
+
+================================
+	Tests
+================================
+>> py.test --cov-report html --cov src/ tests/
 
 ================================
 	Generated files

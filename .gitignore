@@ -8,3 +8,4 @@ output
 .coverage
 tests/translations_tmp
 à_supr
+htmlcov/

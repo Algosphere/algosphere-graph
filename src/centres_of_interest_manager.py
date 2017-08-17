@@ -9,29 +9,33 @@ from mylib.string_op import replace_special_char
 import mylib.checking as checking
 from mylib.notifier import Notifier
 
+
 class CentresOfInterestManager:
     """
     Class that permit to create/load lists of ci(center of interest),
     and to export them in different formats.
     """
     def __init__(self, list_of_ci=None, notifier=None):
-        assert not(list_of_ci) or checking.is_all_instance(list_of_ci, CentreOfInterest)
+        assert not(list_of_ci) or\
+            checking.is_all_instance(list_of_ci, CentreOfInterest)
 
         self.ci_dtd = "ci.dtd"
         self.ci_graph_dtd = "ci_graph.dtd"
-        if notifier != None:
+        if notifier is not None:
             assert isinstance(notifier, Notifier)
 
         self._only_official = False
         self._notifier = notifier
-        if list_of_ci == None:
+        if list_of_ci is None:
             self._list_of_ci = []
         else:
             self._list_of_ci = list_of_ci
 
     def notify(self, text):
-        """ notify something happening to the user (use the Notifier object) """
-        if self._notifier != None:
+        """
+        notify something happening to the user (use the Notifier object)
+        """
+        if self._notifier is not None:
             self._notifier.notify(text)
 
     def __iter__(self):
@@ -72,7 +76,8 @@ class CentresOfInterestManager:
                 root = etree.parse(xml_file)
                 if not dtd.validate(root):
                     raise IOError('Not valide according to "' + dtd_file_path +
-                                  '"\n' + str(dtd.error_log.filter_from_errors()[0]))
+                                  '"\n' +
+                                  str(dtd.error_log.filter_from_errors()[0]))
 
     def delete_unwanted_ci(self):
         if self._only_official:
@@ -90,7 +95,8 @@ class CentresOfInterestManager:
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             name = self._get_element(ci_node, "name")
             if with_link:
-                url = self._get_element(ci_node, "url") #url == None, if the <url> balise is empty
+                # url == None, if the <url> balise is empty
+                url = self._get_element(ci_node, "url")
             else:
                 url = ''
             date = self._get_element(ci_node, "date")
@@ -100,38 +106,45 @@ class CentresOfInterestManager:
             self.append(centre_of_interest)
 
     def load_children(self, ci_graph_file):
-        """ Make the link between the centres of interest and their children """
+        """
+        Make the link between the centres of interest and their children
+        """
         self.verify_xml(ci_graph_file, self.ci_graph_dtd)
         doc = minidom.parse(ci_graph_file)
 
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             ci_name = ci_node.getElementsByTagName("name")[0].firstChild.nodeValue
             centre_of_interest = self.find(ci_name)
-            if centre_of_interest == None:
-                raise ValueError('"' + ci_name + '" found in "'+
+            if centre_of_interest is None:
+                raise ValueError('"' + ci_name + '" found in "' +
                                  ci_graph_file + '" doesn\'t exist in ci.xml')
             children_node = ci_node.getElementsByTagName("children")[0]
             child_nodes = children_node.getElementsByTagName("child")
 
             for child in child_nodes:
-                if child.firstChild == None:
+                if child.firstChild is None:
                     raise ValueError("void child balise in '" + ci_name + "'")
                 else:
                     child_name = child.firstChild.nodeValue
                 child_ci = self.find(child_name)
 
-                if child_ci != None:
+                if child_ci is not None:
                     centre_of_interest.add_child(child_ci)
                 else:
-                    raise ValueError("try to add the child : '" + child_name +
-                                     "' to '" + ci_name + "' but the child was not found")
+                    raise ValueError("try to add the child : '" +
+                                     child_name +
+                                     "' to '" +
+                                     ci_name +
+                                     "' but the child was not found")
 
     @classmethod
     def _get_element(cls, ci_node, element):
-        """ Get the element 'element', of the centre of interest node 'ci_node' """
+        """
+        Get the element 'element', of the centre of interest node 'ci_node'
+        """
         node = ci_node.getElementsByTagName(element)[0]
 
-        if node.firstChild == None:
+        if node.firstChild is None:
             return None
         else:
             return node.firstChild.nodeValue
@@ -145,7 +158,7 @@ class CentresOfInterestManager:
 
         :type translate: function
         """
-        if translate != None:
+        if translate is not None:
             return sorted(self._list_of_ci, key=lambda ci: translate(ci.name))
         else:
             return sorted(self._list_of_ci, key=lambda ci: ci.name)
@@ -160,13 +173,15 @@ class CentresOfInterestManager:
         :type translate: function
         """
 
-        if translate == None:
-            translate = lambda x: x
+        if translate is None:
+            def translate(x):
+                return x
 
         def get_date_name(centre_of_interest):
             """ return a couple (ci_date, ci_name), to sort the list """
-            if centre_of_interest.date != None:
-                return (centre_of_interest.date, translate(centre_of_interest.name))
+            if centre_of_interest.date is not None:
+                return (centre_of_interest.date,
+                        translate(centre_of_interest.name))
             else:
                 return ("", translate(centre_of_interest.name))
 
@@ -185,8 +200,9 @@ class CentresOfInterestManager:
         """
 
         self.delete_unwanted_ci()
-        if translate == None:
-            translate = lambda x: x
+        if translate is None:
+            def translate(x):
+                return x
 
         string = "    <ul>\n"
 
@@ -195,11 +211,13 @@ class CentresOfInterestManager:
         elif order == "by_date":
             sorted_list_of_ci = self.sorted_by_date(translate)
         else:
-            raise ValueError("order should be 'by_name', or 'by_date'. '"+order+"' given.")
+            raise ValueError("order should be 'by_name', or 'by_date'. '" +
+                             order +
+                             "' given.")
 
         if (order == "by_date")and(len(sorted_list_of_ci) > 0):
             date = sorted_list_of_ci[0].date
-            if date != None:
+            if date is not None:
                 str_date = date
             else:
                 str_date = "unknown"
@@ -208,15 +226,17 @@ class CentresOfInterestManager:
         for centre_of_interest in sorted_list_of_ci:
             if (order == "by_date")and(centre_of_interest.date != date):
                 date = centre_of_interest.date
-                if date != None:
+                if date is not None:
                     str_date = date
                 else:
                     str_date = "unknown"
 
                 string += '      <h2>'+str_date+'</h2>'
-            if centre_of_interest.url != None:
-                string += '      <li><a href="' + centre_of_interest.url + '">' + \
-                          translate(centre_of_interest.name) + '</a></li>\n'
+            if centre_of_interest.url is not None:
+                string += '      <li><a href="' +\
+                        centre_of_interest.url + '">' +\
+                        translate(centre_of_interest.name) +\
+                        '</a></li>\n'
 
         string += "    </ul>\n"
 
@@ -234,8 +254,9 @@ class CentresOfInterestManager:
         self.load_children(ci_graph_file)
         self.delete_unwanted_ci()
 
-        if translate == None:
-            translate = lambda x: x
+        if translate is None:
+            def translate(x):
+                return x
 
         string = "digraph CI {\n"
         string += '    node [fontcolor=blue, fontsize=8];\n'
@@ -246,10 +267,11 @@ class CentresOfInterestManager:
             else:
                 color = "1 0 0.8"
 
-            if centre_of_interest.url == None:
+            if centre_of_interest.url is None:
                 color = "0.5 0.5 0.9"
 
-            if (centre_of_interest.url != None) and (centre_of_interest.url != ''):
+            if (centre_of_interest.url is not None) and\
+               (centre_of_interest.url != ''):
                 string += '"[URL="'+centre_of_interest.url + \
                           '", style=filled, fillcolor="' + color + '"];\n'
             else:

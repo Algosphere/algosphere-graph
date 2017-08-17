@@ -75,6 +75,7 @@ def execute():
 
     ci_manager = CentresOfInterestManager([], notifier)
     ci_manager.load_xml(args.data_file, args.only_official, args.with_link)
+    ci_manager.load_template_html('templates/template_html.html')
 
     translations_manager = TranslationsManager(notifier)
 

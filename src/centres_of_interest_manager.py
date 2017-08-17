@@ -2,6 +2,7 @@
 See CentresOfInterestManager class
 """
 
+import re
 from lxml import etree
 from xml.dom import minidom
 from centre_of_interest import CentreOfInterest
@@ -21,6 +22,13 @@ class CentresOfInterestManager:
 
         self.ci_dtd = "ci.dtd"
         self.ci_graph_dtd = "ci_graph.dtd"
+
+        # Templates tags
+        self.html_start_list = "<ul>\n"
+        self.html_end_list = "</ul>\n"
+        self.html_date = "<h2>{date}</h2>\n"
+        self.html_item = '<li><a href="{url}">{name}</a></li>\n'
+
         if notifier is not None:
             assert isinstance(notifier, Notifier)
 
@@ -33,7 +41,7 @@ class CentresOfInterestManager:
 
     def notify(self, text):
         """
-        notify something happening to the user (use the Notifier object)
+        notify something to the user (use the Notifier object)
         """
         if self._notifier is not None:
             self._notifier.notify(text)
@@ -187,6 +195,35 @@ class CentresOfInterestManager:
 
         return sorted(self._list_of_ci, key=get_date_name)
 
+    def load_template_html(self, html_file_path):
+        self.notify('load html template file "' + html_file_path + '"')
+
+        with open(html_file_path, 'r', encoding='utf-8') as html_file:
+            template = html_file.read()
+            start_list = re.search(r'^(.*)<!-- date -->', template, re.DOTALL)
+            if not start_list:
+                raise IOError("Incorrect html template, can’t find start")
+            else:
+                self.html_start_list = start_list.group(1)
+
+            end_list = re.search(r'<!-- /item -->(.*)$', template, re.DOTALL)
+            if not end_list:
+                raise IOError("Incorrect html template, can’t find end")
+            else:
+                self.html_end_list = end_list.group(1)
+
+            date = re.search(r'<!-- date -->(.*)<!-- /date -->', template, re.DOTALL)
+            if not date:
+                raise IOError("Incorrect html template, can’t find date")
+            else:
+                self.html_date = date.group(1)
+
+            item = re.search(r'<!-- item -->(.*)<!-- /item -->', template, re.DOTALL)
+            if not item:
+                raise IOError("Incorrect html template, can’t find item")
+            else:
+                self.html_item = item.group(1)
+
     def to_html_list(self, order="by_name", translate=None):
         """
         Export the sorted list of CI to html.
@@ -204,7 +241,7 @@ class CentresOfInterestManager:
             def translate(x):
                 return x
 
-        string = "    <ul>\n"
+        string = self.html_start_list
 
         if order == "by_name":
             sorted_list_of_ci = self.sorted_by_name(translate)
@@ -221,7 +258,7 @@ class CentresOfInterestManager:
                 str_date = date
             else:
                 str_date = "unknown"
-            string += '      <h2>'+str_date+'</h2>'
+            string += self.html_date.replace('{date}', str_date)
 
         for centre_of_interest in sorted_list_of_ci:
             if (order == "by_date")and(centre_of_interest.date != date):
@@ -231,14 +268,14 @@ class CentresOfInterestManager:
                 else:
                     str_date = "unknown"
 
-                string += '      <h2>'+str_date+'</h2>'
+                string += self.html_date.replace('{date}', str_date)
             if centre_of_interest.url is not None:
-                string += '      <li><a href="' +\
-                        centre_of_interest.url + '">' +\
-                        translate(centre_of_interest.name) +\
-                        '</a></li>\n'
+                item = self.html_item.replace('{url}', centre_of_interest.url)
+                item = item.replace('{name}',
+                                    translate(centre_of_interest.name))
+                string += item
 
-        string += "    </ul>\n"
+        string += self.html_end_list
 
         return string
 

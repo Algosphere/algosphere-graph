@@ -80,7 +80,7 @@ def test_load_xml_with_bad_xml2():
         ci_manager.load_children("tests/bad_ci2_graph.xml")
 
 def test_sorted_by_name():
-    """ Test the sorted_by_name method """
+    """ Test the static sorted_by_name method """
     ci1 = CentreOfInterest("ci1")
     ci2 = CentreOfInterest("ci2")
     ci3 = CentreOfInterest("ci3")
@@ -88,7 +88,7 @@ def test_sorted_by_name():
     assert ci_manager.sorted_by_name() == [ci1, ci2, ci3]
 
 def test_sorted_by_date():
-    """ Test the sorted_by_date method """
+    """ Test the static sorted_by_date method """
     ci1 = CentreOfInterest("ci1")
     ci2 = CentreOfInterest("ci2")
     ci3 = CentreOfInterest("ci3")
@@ -98,3 +98,13 @@ def test_sorted_by_date():
     ci_manager = CentresOfInterestManager([ci2, ci1, ci3])
 
     assert ci_manager.sorted_by_date() == [ci3, ci1, ci2]
+
+
+def test_load_template_html():
+    """ Test the load_template_html method """
+    ci_manager = get_ci_manager()
+    ci_manager.load_template_html("tests/template_html.html")
+    assert ci_manager.html_start_list == "<ul>\n    <div>\n        "
+    assert ci_manager.html_end_list == "\n    </div>\n</ul>\n"
+    assert ci_manager.html_date == "\n        <h3>{date}</h3>\n        "
+    assert ci_manager.html_item == '\n        <li>{name}<a href="{url}">link</a></li>\n        '

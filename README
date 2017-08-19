@@ -1,4 +1,4 @@
-test vic 2                    _                       _
+                     _                       _
                 __ _| | __ _  ___  ___ _ __ | |__   ___ _ __ ___
                / _` | |/ _` |/ _ \/ __| '_ \| '_ \ / _ \ '__/ _ \
               | (_| | | (_| | (_) \__ \ |_) | | | |  __/ | |  __/
@@ -128,4 +128,3 @@ file by extension:
 .dot : graphviz file, open it with a text editor, this files are used to generate the .svg files
 .svg : Scalable Vector Graphics, a image file, open it with a browser or a image viewer.
 .yml : YAML file, open it with a text editor.
-blabla

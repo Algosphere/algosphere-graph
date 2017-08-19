@@ -1,0 +1,18 @@
+digraph CI {
+  node [fontcolor=red, fontsize=10];
+  // official ci start
+  "{name_official}"[URL="{url}", style=filled, fillcolor="0 0 0"];
+  // official ci end
+
+  // unofficial ci start
+  "{name_unofficial}"[URL="{url}", style=filled, fillcolor="1 1 1"];
+  // unofficial ci end
+
+  // without_url start
+  "{name_without_url}"[style=filled, fillcolor="2 2 2"];
+  // without_url end
+
+  // child start
+  "{name}"->"{child}";
+  // child end
+}

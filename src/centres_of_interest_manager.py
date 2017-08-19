@@ -3,13 +3,15 @@ See CentresOfInterestManager class
 """
 
 import re
-from lxml import etree
-from xml.dom import minidom
-from centre_of_interest import CentreOfInterest
-from mylib.string_op import replace_special_char
 import mylib.checking as checking
+from mylib.string_op import replace_special_char
 from mylib.notifier import Notifier
+from xml.dom import minidom
+from lxml import etree
+from centre_of_interest import CentreOfInterest
 
+def identity(x):
+    return x
 
 class CentresOfInterestManager:
     """
@@ -23,12 +25,20 @@ class CentresOfInterestManager:
         self.ci_dtd = "ci.dtd"
         self.ci_graph_dtd = "ci_graph.dtd"
 
-        # Templates tags
+        # Templates html tags
         self.html_start_list = "<ul>\n"
         self.html_end_list = "</ul>\n"
         self.html_date = "<h2>{date}</h2>\n"
         self.html_item = '<li><a href="{url}">{name}</a></li>\n'
 
+        # Templates graphviz tags
+        self.dot_start_graph = "digraph CI {\n" +\
+                               "    node [fontcolor=red, fontsize=8];\n"
+        self.dot_end_graph = "}"
+        self.dot_official_item = '  "{name_official}"[URL="{url}", style=filled, fillcolor="0 0 0"];\n'
+        self.dot_unofficial_item = '  "{name_unofficial}"[URL="{url}", style=filled, fillcolor="0 0 0"];\n'
+        self.dot_without_url_item = '  "{name_without_url}"[style=filled, fillcolor="0 0 0"];\n'
+        self.dot_item_child = '  "{name_official}"->"{child}";\n'
         if notifier is not None:
             assert isinstance(notifier, Notifier)
 
@@ -103,7 +113,7 @@ class CentresOfInterestManager:
         for ci_node in doc.documentElement.getElementsByTagName("CI"):
             name = self._get_element(ci_node, "name")
             if with_link:
-                # url == None, if the <url> balise is empty
+                #url == None, if the <url> balise is empty
                 url = self._get_element(ci_node, "url")
             else:
                 url = ''
@@ -182,8 +192,7 @@ class CentresOfInterestManager:
         """
 
         if translate is None:
-            def translate(x):
-                return x
+            translate = identity
 
         def get_date_name(centre_of_interest):
             """ return a couple (ci_date, ci_name), to sort the list """
@@ -194,6 +203,51 @@ class CentresOfInterestManager:
                 return ("", translate(centre_of_interest.name))
 
         return sorted(self._list_of_ci, key=get_date_name)
+
+    def load_template_dot(self, dot_file_path):
+        self.notify('load dot template file "' + dot_file_path + '"')
+        def get_match(match, message):
+            if not match:
+                raise IOError(message)
+            else:
+                return match.group(1)
+
+        with open(dot_file_path, 'r', encoding='utf-8') as dot_file:
+            template = dot_file.read()
+            start_graph = re.search(r'^(.*)// official ci start',
+                                    template,
+                                    re.DOTALL)
+            self.dot_start_graph = get_match(start_graph,
+                                             "Incorrect dot template, can’t find start")
+
+            end_graph = re.search(r'// child end(.*)$', template, re.DOTALL)
+            self.dot_end_graph = get_match(end_graph, "Incorrect dot template, can’t find end")
+
+
+            official_item = re.search(r'// official ci start(.*)// official ci end',
+                                      template,
+                                      re.DOTALL)
+            self.dot_official_item = get_match(official_item,
+                                               "Incorrect dot template, can’t find official ci item")
+
+            unofficial_item = re.search(r'// unofficial ci start(.*)// unofficial ci end',
+                                        template,
+                                        re.DOTALL)
+            self.dot_unofficial_item = get_match(unofficial_item,
+                                                 "Incorrect dot template, can’t find unofficial ci item")
+
+            without_url_item = re.search(r'// without_url start(.*)// without_url end',
+                                         template,
+                                         re.DOTALL)
+            self.dot_without_url_item = get_match(without_url_item,
+                                                  "Incorrect dot template, can’t find without url ci item")
+
+            item_child = re.search(r'// child start(.*)// child end',
+                                   template,
+                                   re.DOTALL)
+
+            self.dot_item_child = get_match(item_child,
+                                            "Incorrect dot template, can’t find child ci item")
 
     def load_template_html(self, html_file_path):
         self.notify('load html template file "' + html_file_path + '"')
@@ -212,13 +266,17 @@ class CentresOfInterestManager:
             else:
                 self.html_end_list = end_list.group(1)
 
-            date = re.search(r'<!-- date -->(.*)<!-- /date -->', template, re.DOTALL)
+            date = re.search(r'<!-- date -->(.*)<!-- /date -->',
+                             template,
+                             re.DOTALL)
             if not date:
                 raise IOError("Incorrect html template, can’t find date")
             else:
                 self.html_date = date.group(1)
 
-            item = re.search(r'<!-- item -->(.*)<!-- /item -->', template, re.DOTALL)
+            item = re.search(r'<!-- item -->(.*)<!-- /item -->',
+                             template,
+                             re.DOTALL)
             if not item:
                 raise IOError("Incorrect html template, can’t find item")
             else:
@@ -238,8 +296,7 @@ class CentresOfInterestManager:
 
         self.delete_unwanted_ci()
         if translate is None:
-            def translate(x):
-                return x
+            translate = identity
 
         string = self.html_start_list
 
@@ -292,31 +349,34 @@ class CentresOfInterestManager:
         self.delete_unwanted_ci()
 
         if translate is None:
-            def translate(x):
-                return x
+            translate = identity
 
-        string = "digraph CI {\n"
-        string += '    node [fontcolor=blue, fontsize=8];\n'
+        string = self.dot_start_graph
+
         for centre_of_interest in self:
-            string += '    "' + translate(centre_of_interest.name)
-            if centre_of_interest.official:
-                color = "0.27 0.5 0.9"
-            else:
-                color = "1 0 0.8"
 
-            if centre_of_interest.url is None:
-                color = "0.5 0.5 0.9"
-
-            if (centre_of_interest.url is not None) and\
-               (centre_of_interest.url != ''):
-                string += '"[URL="'+centre_of_interest.url + \
-                          '", style=filled, fillcolor="' + color + '"];\n'
+            if centre_of_interest.url is None or centre_of_interest.url == '':
+                dot_template = self.dot_without_url_item
             else:
-                string += '"[style=filled, fillcolor="' + color + '"];\n'
+                if centre_of_interest.official:
+                    dot_template = self.dot_official_item
+                else:
+                    dot_template = self.dot_unofficial_item
+
+            item_name = translate(centre_of_interest.name)
+            item = re.sub(r'{name.*?}', item_name, dot_template)
+            if centre_of_interest.url is not None:
+                item = re.sub(r'{url}', centre_of_interest.url, item)
+            string += item
 
             for child in centre_of_interest.children:
-                string += '    "' + translate(centre_of_interest.name) + \
-                          '"->"' + translate(child.name) + '";\n'
-        string += "}"
+                item_child = re.sub(r'{name.*?}', item_name,
+                                    self.dot_item_child)
+                item_child = re.sub(r'{child}', translate(child.name),
+                                    item_child)
+
+                string += item_child
+
+        string += self.dot_end_graph
 
         return replace_special_char(string)

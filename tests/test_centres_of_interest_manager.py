@@ -108,3 +108,16 @@ def test_load_template_html():
     assert ci_manager.html_end_list == "\n    </div>\n</ul>\n"
     assert ci_manager.html_date == "\n        <h3>{date}</h3>\n        "
     assert ci_manager.html_item == '\n        <li>{name}<a href="{url}">link</a></li>\n        '
+
+def test_load_template_dot():
+    ci_manager = get_ci_manager()
+    ci_manager.load_template_dot("tests/template_dot.dot")
+
+    start_graph = "digraph CI {\n" +\
+                  "  node [fontcolor=red, fontsize=10];\n  "
+    assert ci_manager.dot_start_graph == start_graph
+    assert ci_manager.dot_end_graph == "\n}"
+    assert ci_manager.dot_official_item == '\n  "{name_official}"[URL="{url}", style=filled, fillcolor="0 0 0"];\n  '
+    assert ci_manager.dot_unofficial_item == '\n  "{name_unofficial}"[URL="{url}", style=filled, fillcolor="1 1 1"];\n  '
+    assert ci_manager.dot_without_url_item == '\n  "{name_without_url}"[style=filled, fillcolor="2 2 2"];\n  '
+    assert ci_manager.dot_item_child == '\n  "{name}"->"{child}";\n  '

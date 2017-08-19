@@ -1,11 +1,10 @@
 __pycache__
-*.svg
-*.dot
-*.html
 à_voir
 output
 .sconsign.dblite
 .coverage
-tests/translations_tmp
+tests/translations_tmp/
 à_supr
 htmlcov/
+test.svg
+.cache/

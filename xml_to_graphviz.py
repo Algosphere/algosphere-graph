@@ -35,6 +35,7 @@ def create_graph_for_language(translations_manager,
     translate = translations_manager.get_translateur(lang).translate
 
     yaml_file = open(output_file, 'wb')
+
     yaml_file.write(ci_manager.to_graphviz(ci_graph_file, translate).encode('utf-8'))
     yaml_file.close()
 
@@ -65,6 +66,7 @@ def execute():
 
     ci_manager = CentresOfInterestManager([], notifier)
     ci_manager.load_xml(args.ci_file, args.only_official, args.with_link)
+    ci_manager.load_template_dot('templates/template_dot.dot')
 
     translations_manager = TranslationsManager(notifier)
 

@@ -2,12 +2,13 @@
 Test TranslateurManager class
 """
 
-import pytest
+import sys
 import glob
 import os
 import shutil
+import pytest
 import yaml
-import sys
+
 
 sys.path.append('src')
 
@@ -62,7 +63,7 @@ def test_save_yaml_file():
 
     with open(lang_file, 'rb') as yml_file:
         translations = yaml.safe_load(yml_file)
-        if translations == None:
+        if translations is None:
             translations = {}
 
     assert 'ci_plop' in translations
@@ -86,7 +87,7 @@ def test_fill_yaml_file():
         translations_manager.fill_yaml_file(lang, lang_file, ci_manager)
         with open(lang_file, 'rb') as yml_file:
             translations[lang] = yaml.safe_load(yml_file)
-            if translations[lang] == None:
+            if translations[lang] is None:
                 translations[lang] = {}
             translations[lang] = translations[lang]
 

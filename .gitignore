@@ -8,3 +8,4 @@ tests/translations_tmp/
 htmlcov/
 test.svg
 .cache/
+templates/template_test.dot

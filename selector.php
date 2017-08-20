@@ -28,13 +28,13 @@
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
       <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <p class="navbar-text">Algosphere Alliance's centers of interest graphical representation</p>
+      <p class="navbar-text" style="padding-left: 10px;">Algosphere Alliance's centers of interest graphical representation</p>
     </div>
 	<div id="navbar" class="navbar-collapse collapse">
 	  <ul class="nav navbar-nav">
@@ -133,16 +133,6 @@
 				$(this).find('.dropdown-menu').first().stop(true, true).fadeIn(150);
 			}, function() {
 				$(this).find('.dropdown-menu').first().stop(true, true).fadeOut(150);
-			});
-
-		// annulle collapse quand clic dehors
-			$(document).click(function (event) {
-				var clickover = $(event.target);
-				var $navbar = $(".navbar-collapse");               
-				var _opened = $navbar.hasClass("in");
-				if (_opened === true && !clickover.hasClass("navbar-toggle")) {      
-					$navbar.collapse('hide');
-				}
 			});
 	</script>
 </body>

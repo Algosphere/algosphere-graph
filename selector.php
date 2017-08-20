@@ -29,7 +29,8 @@
   <div class="container">
 	<div id="navbar" class="navbar-collapse collapse">
 	  <ul class="nav navbar-nav">
-		<form class="navbar-form navbar-left" role="search">
+		<p class="navbar-text">Algosphere Alliance's centers of interest graphical representation</p>
+		<form class="navbar-form navbar-left">
 			<div class="form-group">
 				<label for="lang">Language </label>
 				<select id="lang" class="form-control">

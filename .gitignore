@@ -9,3 +9,5 @@ htmlcov/
 test.svg
 .cache/
 templates/template_test.dot
+templates/commande.txt
+templates/test.svg​

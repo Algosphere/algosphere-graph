@@ -25,70 +25,51 @@
 		<title>centres of interest</title>
 	</head>
 <body>
-<nav class="navbar navbar-default navbar-static-top">
-  <div class="container">
-	<div id="navbar" class="navbar-collapse collapse">
-	  <ul class="nav navbar-nav">
-		<form class="navbar-form navbar-left" role="search">
-			<div class="form-group">
-				<label for="lang">Language </label>
-				<select id="lang" class="form-control">
-						<?php
-						 $langs = array("german", "english", "french");
-						 foreach ($langs as $lang)
-						 {
-						 echo '<option value="' . $lang . '" selected>' . $lang . '</option>';
-						 }
-						?>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="kind">Type </label>
-				<select id="kind" class="form-control">
-					<option value="utility" selected>utility graph</option>
-					<option value="by-date">list by date</option>
-					<option value="by-name">list by name</option>
-				</select>
-			</div>
-			<div class="checkbox">
-				<label>
-				<input type="checkbox" id="show_objects" value="show objects"><span> Show the CI objects</span>
-				</label>
-			</div>
-		</form>
-	  </ul>
-	</div><!--/.nav-collapse -->
-  </div>
-</nav>
-	
-<div class="container">	
-	<div id="graphs">
-		<?php
-		   foreach ($langs as $lang)
-		   {
-			   echo '<object id="' . $lang . 'utility" data="output/ci-official-' . $lang . '.svg" type="image/svg+xml"></object>';
-			   $link = 'output/ci-official-' . $lang . '-by-date.html';
-			   echo '<div id="' . $lang . 'by-date">';
-			   include($link);
-			   echo '</div>';
-			   $link = 'output/ci-official-' . $lang . '-by-name.html';
-			   echo '<div id="' . $lang . 'by-name">';
-			   include($link);
-			   echo '</div>';
+<div style="position: fixed; left: 0;">
+	<select id="lang">
+	  <?php
+		 $langs = array("german", "english", "french");
+		 foreach ($langs as $lang)
+		 {
+		 echo '<option value="' . $lang . '" selected>' . $lang . '</option>';
+		 }
+	  ?>
 
-			   echo '<object id="' . $lang . 'utility_objects" data="output/ci-' . $lang . '.svg" type="image/svg+xml"></object>';
-			   $link = 'output/ci-' . $lang . '-by-date.html';
-			   echo '<div id="' . $lang . 'by-date_objects">';
-			   include($link);
-			   echo '</div>';
-			   $link = 'output/ci-' . $lang . '-by-name.html';
-			   echo '<div id="' . $lang . 'by-name_objects">';
-			   include($link);
-			   echo '</div>';
-		   }
-		?>
-	</div>
-</div> <!-- container -->
+	</select>
+	<select id="kind">
+	  <option value="utility" selected>utility graph</option>
+	  <option value="by-date">list by date</option>
+	  <option value="by-name">list by name</option>
+	</select>
+	<input type="checkbox" id="show_objects" value="show objects">show the CI objects<br>
+</div><br><br>
+
+<div id="graphs">
+	<?php
+	   foreach ($langs as $lang)
+	   {
+		   echo '<object id="' . $lang . 'utility" data="output/ci-official-' . $lang . '.svg" type="image/svg+xml"></object>';
+		   $link = 'output/ci-official-' . $lang . '-by-date.html';
+		   echo '<div id="' . $lang . 'by-date">';
+		   include($link);
+		   echo '</div>';
+		   $link = 'output/ci-official-' . $lang . '-by-name.html';
+		   echo '<div id="' . $lang . 'by-name">';
+		   include($link);
+		   echo '</div>';
+
+		   echo '<object id="' . $lang . 'utility_objects" data="output/ci-' . $lang . '.svg" type="image/svg+xml"></object>';
+		   $link = 'output/ci-' . $lang . '-by-date.html';
+		   echo '<div id="' . $lang . 'by-date_objects">';
+		   include($link);
+		   echo '</div>';
+		   $link = 'output/ci-' . $lang . '-by-name.html';
+		   echo '<div id="' . $lang . 'by-name_objects">';
+		   include($link);
+		   echo '</div>';
+	   }
+	?>
+</div>
 
 <!-- Javascript -->
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>

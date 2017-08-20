@@ -27,9 +27,17 @@
 <body>
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <p class="navbar-text">Algosphere Alliance's centers of interest graphical representation</p>
+    </div>
 	<div id="navbar" class="navbar-collapse collapse">
 	  <ul class="nav navbar-nav">
-		<p class="navbar-text">Algosphere Alliance's centers of interest graphical representation</p>
 		<form class="navbar-form navbar-left">
 			<div class="form-group">
 				<label for="lang">Language </label>

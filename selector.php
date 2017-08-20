@@ -51,14 +51,14 @@
 						?>
 				</select>
 			</div>
-			<div class="form-group">
+			<!-- <div class="form-group">
 				<label for="kind">Type </label>
 				<select id="kind" class="form-control">
 					<option value="utility" selected>utility graph</option>
 					<option value="by-date">list by date</option>
 					<option value="by-name">list by name</option>
 				</select>
-			</div>
+			</div> -->
 			<div class="checkbox">
 				<label>
 				<input type="checkbox" id="show_objects" value="show objects"><span> Show the CI objects</span>
